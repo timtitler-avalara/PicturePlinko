@@ -15,3 +15,6 @@ C:\svn\Home\PicturePlinko\obj\x64\Release\PicturePlinko.csproj.GenerateResource.
 C:\svn\Home\PicturePlinko\obj\x64\Release\PicturePlinko.exe
 C:\svn\Home\PicturePlinko\obj\x64\Release\PicturePlinko.pdb
 C:\svn\Home\PicturePlinko\obj\x64\Release\PicturePlinko.csprojResolveAssemblyReference.cache
+C:\svn\NerfGun\PicturePlinko\SourceCode\PicturePlinko\bin\x64\Release\PicturePlinko.exe.config
+C:\svn\NerfGun\PicturePlinko\SourceCode\PicturePlinko\obj\x64\Release\PicturePlinko.exe
+C:\svn\NerfGun\PicturePlinko\SourceCode\PicturePlinko\obj\x64\Release\PicturePlinko.pdb

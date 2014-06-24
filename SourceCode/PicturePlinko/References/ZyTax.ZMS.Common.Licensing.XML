@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZyTax.ZMS.Common.Licensing</name>
+    </assembly>
+    <members>
+        <member name="T:ZyTax.ZMS.Common.Licensing.License">
+            <summary>
+            Provides information about a provided license key
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Licensing.License.#ctor">
+            <summary>
+            Constructor - sets default authorization for new keys
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Licensing.License.#ctor(System.String)">
+            <summary>
+            Constructor - Does not validate the key.  Used for reading key information, but should not be used when concerned about validating a key.
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Licensing.License.#ctor(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Constructor - sets the authorized components enbedded within a supplied key
+            </summary>
+            <param name="key"></param>
+            <param name="companyName">Used for License Validation</param>
+            <param name="frontEndUserCount">Used for License Validation</param>
+            <param name="backEndUserCount">Used for License Validation</param>
+        </member>
+        <member name="F:ZyTax.ZMS.Common.Licensing.License._componentAuthorizationElementsMap">
+            <summary>
+            Maps the elements to the components
+            </summary>
+        </member>
+        <member name="F:ZyTax.ZMS.Common.Licensing.License._governmentAuthorizationElementsMap">
+            <summary>
+            Maps the elements to a government's custom pages
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Licensing.License.SetDenyAllAuthorization">
+            <summary>
+            Key is invalid.  Turn everything off.
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Licensing.License.SetDefaultAuthorization">
+            <summary>
+            No key is provided, start the object up with the default options of all keys
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Licensing.License.SetAuthorization">
+            <summary>
+            Using the key, read/set the authorization values
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Licensing.License.IsAuthorized(System.Int32)">
+            <summary>
+            returns if an element is authorized
+            </summary>
+            <param name="index">Enum hash value of item</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Licensing.License.IsAuthorized(ZyTax.ZMS.Common.Licensing.License.AuthorizationElement)">
+            <summary>
+            returns if a page group is authorized
+            </summary>
+            <param name="element"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Licensing.License.MaximumUserLimitExceeded(System.Int32,System.Int32)">
+            <summary>
+            Validates the existing user counts are not in violation of the licence key restrictions
+            </summary>
+            <param name="frontEndUserCount"></param>
+            <param name="backEndUserCount"></param>
+            <returns>returns true if limit has been exceeded</returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Licensing.License.DecryptLicenseKey(System.String)">
+            <summary>
+            Decrypts specified ciphertext using Rijndael symmetric key algorithm.
+            </summary>
+            <param name="cipherText">
+            Base64-formatted ciphertext value.
+            </param>    
+            <returns>
+            Decrypted string value.
+            </returns>
+            <remarks>
+            Most of the logic in this function is similar to the Encrypt
+            logic. In order for decryption to work, all parameters of this function
+            - except cipherText value - must match the corresponding parameters of
+            the Encrypt function which was called to generate the
+            ciphertext.
+            Added Hash Check to the decrypt.  If the hash does not match, then return and empty string.  
+            The empty string will trigger the license to be invalid
+            </remarks>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Licensing.License.GetLicenseKeyHash(System.String)">
+            <summary>
+            Hashes an input string
+            http://blog.stevex.net/index.php/c-code-snippet-creating-an-md5-hash-string/
+            Note, this same method is copied into the Licensing class.  Any changes need to be sync'd up
+            between this internal class and the licensing class
+            </summary>
+            <param name="licenseKey"></param>
+            <returns></returns>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.License.Key">
+            <summary>
+            Secured Licence Key
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.License.SystemIndicator">
+            <summary>
+            Reads the system type indicator from the key
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.License.SystemDefaultCountry">
+            <summary>
+            The default country for the system
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.License.SystemDefaultJurisdiction">
+            <summary>
+            The default Jurisdiction for the system
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.License.CompanyName">
+            <summary>
+            Company Name
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.License.ExpirationDate">
+            <summary>
+            Expiration Data of License Key
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.License.MaximumUsers">
+            <summary>
+            Number of Max Active Users defined within the system
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.License.MaximumRecords">
+            <summary>
+            Number of Max Records Users can upload for data file upload within the system
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.License.MaximumUsersIncludeBackendUsers">
+            <summary>
+            if backend users should be applied to the user count of the key
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.License.IsVolumeLicense">
+            <summary>
+            A volume license does not require the company name validation
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.License.AuthorizedJurisdictionsForReturns">
+            <summary>
+            Authorized Jurisdictions for Returns - Includes all countries
+            Key: Enum Value
+            Value: Country_Jurisdiction        
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.License.AuthorizedCountriesForReturns">
+            <summary>
+            Authorized Countries for Returns - Includes all countries
+            Key: Enum Value
+            Value: Country       
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.License.AuthorizedTaxpayerTypesForReturns">
+            <summary>
+            Authorized Taxpayers for Returns - Includes all countries
+            Key: Enum Value
+            Value: Country_Jurisdiction_TaxPayerType      
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.License.AuthorizedJurisdictionsForDetermination">
+            <summary>
+            Authorized Jurisdictions for Determination - Includes all countries
+            Key: Enum Value
+            Value: Country_Jurisdiction
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.License.AuthorizedComponents">
+            <summary>
+            Components that have been authorized for use
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.License.AuthorizedElements">
+            <summary>
+            Components that have been authorized for use
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.License.IsLicenseValid">
+            <summary>
+            Is the license key a valid license key, to be used in conjunction with the Is License Active
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.License.IsLicenseActive">
+            <summary>
+            Determines if the licensed expiration date has termed or max user counts have been reached
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.Licensing.License.AuthorizationKeyHeader">
+            <summary>
+            Positions 0 - 9 defining license header
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.Licensing.License.AuthorizationComponent">
+            <summary>
+            Positions 10 - 99 defining Components to be authorized
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.Licensing.License.JurisdictionsUSAReturns">
+            <summary>
+            Positions 100-999 defining USA Jurisdictions Returns
+            Using ZyTax as a guide the first 400 slots have been assigned by state
+            This list will grow as we introduce more returns into the system.
+            Please keep this list in Alpha order to make it easier for lookup
+            The next available position is     ********  508  ***************
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.Licensing.License.JurisdictionsCanadaReturns">
+            <summary>
+            Positions 1000 - 1499 defining Canadian (Extra Large for Other country returns) Jurisdictions Returns
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.Licensing.License.JurisdictionsDetermination">
+            <summary>
+            Positions 1500 - 1999 defining Determination Jurisdictions 
+            CountryCode_Jurisidiction
+            </summary>
+            <remarks>Next number is 1872 BR-TO is 1871</remarks>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.Licensing.License.AuthorizationElement">
+            <summary>
+            Page groups that can be mapped to authorized components
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.Licensing.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Licensing.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

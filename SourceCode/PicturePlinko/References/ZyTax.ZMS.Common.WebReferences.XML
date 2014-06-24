@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZyTax.ZMS.Common.WebReferences</name>
+    </assembly>
+    <members>
+        <member name="T:ZyTax.ZMS.Common.WebReferences.UtahEFileService">
+            <summary>
+            Wrapper Class to the MFET.cs which is a generated class built from Utah's WSDL
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.WebReferences.UtahEFileService.TransmitEFile(System.Byte[],ZyTax.ZMS.Common.DataAccess.API.DataService,ZyTax.ZMS.Common.Contracts.BusinessObjects.EfileHeaderDC)">
+            <summary>
+            Sends efile to Utah via the webservice
+            </summary>
+            <param name="efileData"></param>
+            <param name="dataService"></param>
+            <param name="eFileHeader"></param>
+            <returns>Logs all errors to the efile log, returns submission id, and a null submission id upon error</returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.WebReferences.UtahEFileService.WriteEFileLogMessage(ZyTax.ZMS.Common.DataAccess.API.DataService,System.Int32,ZyTax.ZMS.Common.Contracts.Indicators.ErrorLevel,System.String)">
+            <summary>
+            Note, this method was copied from the efile engine's library.  Ideally we should consider moving it to a common shared location
+            </summary>
+            <param name="dataService"></param>
+            <param name="eFileHeaderID"></param>
+            <param name="errorLevel"></param>
+            <param name="message"></param>
+        </member>
+    </members>
+</doc>

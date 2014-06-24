@@ -1,0 +1,616 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZyTax.ZMS.Common.ExceptionHandling</name>
+    </assembly>
+    <members>
+        <member name="T:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsBusinessEntityValidityException">
+            <summary>
+            Base exception which will show the user a friendly message instead of redirecting to the error page.
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsFriendlyException">
+            <summary>
+            Base exception which will show the user a friendly message instead of redirecting to the error page.
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsException">
+            <summary>
+            A base class that all exceptions we throw should inherit from or use.
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsException.#ctor">
+            <summary>
+            Generic ZMS Exception
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsException.#ctor(System.String)">
+            <summary>
+            Creates a new exception with the passed message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsException.#ctor(System.String,System.Exception)">
+            <summary>
+            Wrap an existing exception with the passed message.
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Serialized Exception Constructor
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsFriendlyException.#ctor">
+            <summary>
+            Generic ZMS Friendly Exception
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsFriendlyException.#ctor(System.String)">
+            <summary>
+            Creates a new exception with the passed message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsFriendlyException.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new exception with the passed message and friendly message.
+            </summary>
+            <param name="message"></param>
+            <param name="friendlyMessage"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsFriendlyException.#ctor(System.String,System.Exception)">
+            <summary>
+            Wrap an existing exception with the passed message.
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsFriendlyException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Wrap an existing exception with the passed message and friendly message.
+            </summary>
+            <param name="message"></param>
+            <param name="friendlyMessage"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsFriendlyException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Serialized Exception Constructor
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsFriendlyException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the System.Runtime.Serialization.SerializationInfo with information about the exception.
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsFriendlyException.FriendlyMessage">
+            <summary>
+            The friendly message to show a user.
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsBusinessEntityValidityException.#ctor">
+            <summary>
+            Generic ZMS Business Entity Validity Friendly Exception
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsBusinessEntityValidityException.#ctor(System.String)">
+            <summary>
+            Creates a new exception with the passed message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsBusinessEntityValidityException.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new exception with the passed message and friendly message.
+            </summary>
+            <param name="message"></param>
+            <param name="friendlyMessage"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsBusinessEntityValidityException.#ctor(System.String,System.Exception)">
+            <summary>
+            Wrap an existing exception with the passed message.
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsBusinessEntityValidityException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Wrap an existing exception with the passed message and friendly message.
+            </summary>
+            <param name="message"></param>
+            <param name="friendlyMessage"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsBusinessEntityValidityException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Serialized Exception Constructor
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsBusinessEntityValidityException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the System.Runtime.Serialization.SerializationInfo with information about the exception.
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsBusinessEntityWarningException">
+            <summary>
+            Base exception which will show the user a friendly message instead of redirecting to the error page.
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsBusinessEntityWarningException.#ctor">
+            <summary>
+            Generic ZMS Business Entity Warning Friendly Exception
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsBusinessEntityWarningException.#ctor(System.String)">
+            <summary>
+            Creates a new exception with the passed message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsBusinessEntityWarningException.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new exception with the passed message and friendly message.
+            </summary>
+            <param name="message"></param>
+            <param name="friendlyMessage"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsBusinessEntityWarningException.#ctor(System.String,System.Exception)">
+            <summary>
+            Wrap an existing exception with the passed message.
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsBusinessEntityWarningException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Wrap an existing exception with the passed message and friendly message.
+            </summary>
+            <param name="message"></param>
+            <param name="friendlyMessage"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsBusinessEntityWarningException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Serialized Exception Constructor
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsBusinessEntityWarningException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Sets the System.Runtime.Serialization.SerializationInfo with information about the exception.
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsDependentRecordsException">
+            <summary>
+            Exception to throw when deleting a record and FK constraints are violated.
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsDependentRecordsException.#ctor">
+            <summary>
+            Creates a new excpetion with the default message and friendly message.
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsDependentRecordsException.#ctor(System.String)">
+            <summary>
+            Creates a new exception with the default friendly message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsDependentRecordsException.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new exception with the passed message and friendly message.
+            </summary>
+            <param name="message"></param>
+            <param name="friendlyMessage"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsDependentRecordsException.#ctor(System.Exception)">
+            <summary>
+            Wraps an existing excpetion with the default message and friendly message.
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsDependentRecordsException.#ctor(System.String,System.Exception)">
+            <summary>
+            Wraps an existing exception with the default friendly message.
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsDependentRecordsException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Wraps an existing exception with the passed message and friendly message.
+            </summary>
+            <param name="message"></param>
+            <param name="friendlyMessage"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsDependentRecordsException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Serialized Exception Constructor
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsDuplicateRecordsException">
+            <summary>
+            Exception to throw when inserting a record and PK constraints are violated.
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsDuplicateRecordsException.#ctor">
+            <summary>
+            Creates a new excpetion with the default message and friendly message.
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsDuplicateRecordsException.#ctor(System.String)">
+            <summary>
+            Creates a new exception with the default friendly message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsDuplicateRecordsException.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new exception with the passed message and friendly message.
+            </summary>
+            <param name="message"></param>
+            <param name="friendlyMessage"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsDuplicateRecordsException.#ctor(System.Exception)">
+            <summary>
+            Wraps an existing excpetion with the default message and friendly message.
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsDuplicateRecordsException.#ctor(System.String,System.Exception)">
+            <summary>
+            Wraps an existing exception with the default friendly message.
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsDuplicateRecordsException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Wraps an existing exception with the passed message and friendly message.
+            </summary>
+            <param name="message"></param>
+            <param name="friendlyMessage"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsDuplicateRecordsException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Serialized Exception Constructor
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsTooManyRecordsException">
+            <summary>
+            Exception to throw when loading by PK returns multiple records.
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsTooManyRecordsException.#ctor">
+            <summary>
+            Creates a new excpetion with the default message and friendly message.
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsTooManyRecordsException.#ctor(System.String)">
+            <summary>
+            Creates a new exception with the default friendly message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsTooManyRecordsException.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new exception with the passed message and friendly message.
+            </summary>
+            <param name="message"></param>
+            <param name="friendlyMessage"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsTooManyRecordsException.#ctor(System.Exception)">
+            <summary>
+            Wraps an existing excpetion with the default message and friendly message.
+            </summary>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsTooManyRecordsException.#ctor(System.String,System.Exception)">
+            <summary>
+            Wraps an existing exception with the default friendly message.
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsTooManyRecordsException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Wraps an existing exception with the passed message and friendly message.
+            </summary>
+            <param name="message"></param>
+            <param name="friendlyMessage"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.Exceptions.ZmsTooManyRecordsException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Serialized Exception Constructor
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionHandler">
+            <summary>
+            Stanard provider for ZMS exception handling
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionHandler.HandleException(System.Exception@)">
+            <summary>
+            Will log/email error based upon configuration settings.  
+            Returns true if exception should be rethrown
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionHandler.HandleException(System.Exception,System.String)">
+            <summary>
+            Will log/email error based upon configuration settings.  
+            Returns true if exception should be rethrown
+            </summary>
+            <param name="ex"></param>
+            <param name="errorSource">Source method handling the exception</param>        
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionHandler.HandleException(System.Exception,System.String,System.String)">
+            <summary>
+            Will log/email error based upon configuration settings.  
+            Returns true if exception should be rethrown
+            </summary>
+            <param name="ex"></param>
+            <param name="errorSource">Source method handling the exception</param>
+            <param name="supplementalMessage">Additonal message text to be appened as Extended properties.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.AMatchingRecordAlreadyExistsInTheSystem">
+            <summary>
+              Looks up a localized string similar to A matching record already exists in the system..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.AnErrorHasOccured">
+            <summary>
+              Looks up a localized string similar to An error has occurred.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.AnUnfinishedItemAlreadyExistsInTheQueue">
+            <summary>
+              Looks up a localized string similar to An unfinished item already exists in the queue.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.AnUnspecifedZMSExceptionHasOccured">
+            <summary>
+              Looks up a localized string similar to An unspecified ZMS exception has occurred.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.CodeBasedValidationValidateLateLoadCutoffMonthsHasThrownAnException">
+            <summary>
+              Looks up a localized string similar to Code based validation [ValidateLateLoadCutoffMonths] has thrown an exception..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.CrossMatchingDefinitionDidNotIncludeMatchColumns">
+            <summary>
+              Looks up a localized string similar to Cross Matching definition did not include match columns..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.CrossMatchingDefinitionWasNotFound">
+            <summary>
+              Looks up a localized string similar to Cross Matching definition was not found..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.DefinitionDidNotIncludeMatchColumnsForCrossmatchId">
+            <summary>
+              Looks up a localized string similar to Definition did not include match columns for Cross Match id [{0}].
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.DefinitionWasNotFoundForXMId">
+            <summary>
+              Looks up a localized string similar to Definition was not found for Cross Match id [{0}].
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.EFile">
+            <summary>
+              Looks up a localized string similar to E-File.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.EFileContactNamePresentlyNotSetPleaseUpdateAccordingly">
+            <summary>
+              Looks up a localized string similar to E-File contact name presently not set, please update accordingly..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.ErrorInEFileEngineExtractorExtractDateTime">
+            <summary>
+              Looks up a localized string similar to Error in EFileEngine.Extractor.ExtractDateTime.  Undefined date format[{0}]..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.ErrorProcessingOfCrossmatchQueueItemWithinTheMatchBlendingsMethod">
+            <summary>
+              Looks up a localized string similar to Error Processing of Cross Match Queue Item [{0}] within the Match Blending method..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.GeneralContactNamePresentlyNotSetPleaseUpdateAccordingly">
+            <summary>
+              Looks up a localized string similar to General contact name presently not set, please update accordingly..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.MissingAddressInformation">
+            <summary>
+              Looks up a localized string similar to Missing address information [{0}]..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.MissingAddressInformationForLocationWithId">
+            <summary>
+              Looks up a localized string similar to Missing location address information [{0}] for location with location id of [{1}]..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.MoreThanOneRecordFoundWhileLoadingByPK">
+            <summary>
+              Looks up a localized string similar to More than one record found while loading by PK..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.NameControlCannotBeBlankPleaseUpdateTheCompanyInformationAndIncludeAValidNameControl">
+            <summary>
+              Looks up a localized string similar to Name Control cannot be blank.  Please update the Company Information and include a valid Name Control..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.NoResultsFound">
+            <summary>
+              Looks up a localized string similar to No results found.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.PleaseResubmitRequestAfterProcessingIsCompleted">
+            <summary>
+              Looks up a localized string similar to Please resubmit request after processing is completed..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.Return">
+            <summary>
+              Looks up a localized string similar to Return.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.TheAuditDidNotProvideMatchColumnsToAdequatelyDefineAMatchPleaseProvideAdditionalMatchColumns">
+            <summary>
+              Looks up a localized string similar to The audit did not provide match columns to adequately define a match.  Please provide additional match columns..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.TheBusinessEntityTaxTypeIsNotSupported">
+            <summary>
+              Looks up a localized string similar to The Business Entity Tax Type [{0}] is not supported..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.TheEFileHeaderIsInvalid">
+            <summary>
+              Looks up a localized string similar to The E-File Header [{0}] is invalid..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.ThereAreNoExistingResultsForThisRecord">
+            <summary>
+              Looks up a localized string similar to There are no existing results for this record..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.TheRecordIsInUseInOtherRowsAndCannotBeDeleted">
+            <summary>
+              Looks up a localized string similar to The record is in use in other rows and cannot be deleted..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.ThereWasAPKConstraintErrorWhileInsertingARecord">
+            <summary>
+              Looks up a localized string similar to There was a PK constraint error while inserting a record..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.TheseAreARequiredInput">
+            <summary>
+              Looks up a localized string similar to These are a required input..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.TheTaxpayerTypeEFileGenerationReportIsNotImplemented">
+            <summary>
+              Looks up a localized string similar to The Taxpayer Type [{0}] E-File generation report is not implemented..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.TheWhateverIsCurrentlyBeingProcessed">
+            <summary>
+              Looks up a localized string similar to The {0} is currently being processed. .
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.ThisRecordHasFKDependenciesAndCannotBeRemoved">
+            <summary>
+              Looks up a localized string similar to This record has FK dependencies and cannot be removed..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.TooManyResultsFound">
+            <summary>
+              Looks up a localized string similar to Too many results found.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.UnableToRetrieveDataFromDatabase">
+            <summary>
+              Looks up a localized string similar to Unable to retrieve data from database..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.UnexpectedRecordsFoundPleaseContactSupport">
+            <summary>
+              Looks up a localized string similar to Unexpected records found; please contact support..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.ValidCompanyAccountRecordNotFoundCannotCalculateReturn">
+            <summary>
+              Looks up a localized string similar to Valid company account record not found, cannot calculate return.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsExceptionMessages.ValidCompanyInformationRecordNotFoundCannotCalculateReturn">
+            <summary>
+              Looks up a localized string similar to Valid company information record not found, cannot calculate return.
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.ExceptionHandling.ZmsFriendlyExceptionMessages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsFriendlyExceptionMessages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsFriendlyExceptionMessages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsFriendlyExceptionMessages.AccessDenied">
+            <summary>
+              Looks up a localized string similar to Access Denied.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsFriendlyExceptionMessages.CompanyNotFound">
+            <summary>
+              Looks up a localized string similar to Company {0} not found..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsFriendlyExceptionMessages.FormatException">
+            <summary>
+              Looks up a localized string similar to Format Exception.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.ExceptionHandling.ZmsFriendlyExceptionMessages.ScheduleNotFound">
+            <summary>
+              Looks up a localized string similar to Schedule not found..
+            </summary>
+        </member>
+    </members>
+</doc>

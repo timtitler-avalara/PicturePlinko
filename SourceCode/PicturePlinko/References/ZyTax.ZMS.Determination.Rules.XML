@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZyTax.ZMS.Determination.Rules</name>
+    </assembly>
+    <members>
+        <member name="M:ZyTax.ZMS.Determination.Rules.DefaultTax.ApplyProfile(ZyTax.ZMS.Common.Contracts.BusinessObjects.BusinessProfileDC)">
+            <summary>
+            Adds the passed profile to the list of applied profiles
+            </summary>
+            <param name="profile"></param>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Rules.GoldenRules.TransactionLine">
+            string _licenseNumber = "";
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZyTax.ZMS.Common.Internal</name>
+    </assembly>
+    <members>
+        <member name="T:ZyTax.ZMS.Common.Internal.LicenseKeyGenerator">
+            <summary>
+            Generates a License Key
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Internal.LicenseKeyGenerator.#ctor(ZyTax.ZMS.Common.Licensing.License)">
+            <summary>
+            Internal class which generates a license key
+            </summary>
+            <param name="license"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Internal.LicenseKeyGenerator.GenerateLicenseKey(System.String,System.String)">
+            <summary>
+            Generates a secured key
+            </summary>
+            <param name="authorizationKey"></param>
+            <param name="description"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Internal.LicenseKeyGenerator.AuthorizedToGenerateKey(System.String)">
+            <summary>
+            Ensures that the key generation request is valid and authorized to run.
+            Hard coded connection string ensure this code can only be ran internally
+            Exposing as a public method, so that the key generator page can also validate itself
+            </summary>
+            <returns></returns>
+            <param name="authorizationKey">License Key that has permission to generate new keys</param> 
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Internal.LicenseKeyGenerator.LogGeneratedKey(System.String)">
+            <summary>
+            Logs the generated key into the license_log table
+            </summary>
+            <returns></returns>
+            <param name="description"></param> 
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Internal.LicenseKeyGenerator.GenerateUnsecuredKeyValues">
+            <summary>
+            Using the license class, build a unsecured - delimited list of values
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Internal.LicenseKeyGenerator.GenerateDelimitedHashedValues(System.Int32,System.Int32,System.Collections.Hashtable)">
+            <summary>
+            Generates the delimited values for a giving hashtable using provided knowledge of the enum index of valid values
+            </summary>
+            <param name="startIndex"></param>
+            <param name="endIndex"></param>
+            <param name="licensedValues"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Internal.LicenseKeyGenerator.EncryptLicenseKey(System.String)">
+            <summary>
+            Encrypts specified plaintext using Rijndael symmetric key algorithm
+            and returns a base64-encoded result.
+            </summary>
+            <param name="plainText">
+            Plaintext value to be encrypted.
+            </param>
+            <returns>
+            Encrypted value formatted as a base64-encoded string.
+            </returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Internal.LicenseKeyGenerator.GetLicenseKeyHash(System.String)">
+            <summary>
+            Hashes an input string
+            http://blog.stevex.net/index.php/c-code-snippet-creating-an-md5-hash-string/
+            Note, this same method is copied into the Licensing class.  Any changes need to be sync'd up
+            between this internal class and the licensing class
+            </summary>
+            <param name="licenseKey"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

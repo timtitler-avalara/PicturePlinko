@@ -1,0 +1,1 @@
+C:\svn\Home\PicturePlinko\bin\Debug\ApplicationTemplate.exe.config

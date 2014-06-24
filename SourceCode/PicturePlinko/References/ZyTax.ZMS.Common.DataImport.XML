@@ -1,0 +1,902 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZyTax.ZMS.Common.DataImport</name>
+    </assembly>
+    <members>
+        <member name="F:ZyTax.ZMS.Common.DataImport.DataConversionTools._dataService">
+            <summary>
+            Constructor
+            </summary>
+            <param name="jobId"></param>
+            <param name="dataService"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.DataConversionTools.ConvertCsvWithHeadersToDataTable(System.IO.FileSystemInfo)">
+            <summary>
+            Takes the passed in CSV file and converts it to a data table
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.DataConversionTools.ConvertCsvWithoutHeadersToDataTable(System.IO.FileSystemInfo,System.String)">
+            <summary>
+            Takes the passed in CSV file and converts it to a data table
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.DataConversionTools.ConvertCsvWithoutHeadersToDataTable(ZyTax.ZMS.Common.Contracts.BusinessObjects.DocumentDC,System.String)">
+            <summary>
+            Takes the passed in CSV file and converts it to a data table
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.DataConversionTools.ConvertCsvWithHeadersToDataTable(ZyTax.ZMS.Common.Contracts.BusinessObjects.DocumentDC)">
+            <summary>
+            Takes the passed in CSV file and converts it to a data table
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.DataConversionTools.CreateMasterScheduleTransactionCsvTable">
+            <summary>
+            Creates a master data table based on the current schedule transaction dc
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.DataConversionTools.CreateMasterTdwCsvTable">
+            <summary>
+            creates a header record for the Tdw mapper
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.DataConversionTools.CreateMasterAltaCsvTable">
+            <summary>
+            creates the header record for the Alta mapper
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.DataConversionTools.CreateMasterTransactionsTaxesCsvTable">
+            <summary>
+            Creates a master data table based upon the transactions taxes dc
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.DataConversionTools.AddMissingScheduleTransactionsTableColumns(System.Data.DataTable)">
+            <summary>
+            Adds missing columns based upon the current layout to the passed in table
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.DataConversionTools.AddMissingTdwTableColumns(System.Data.DataTable)">
+            <summary>
+            adds the missing columns based upon the current layout to the passed in table
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.DataConversionTools.AddMissingTransactionTaxesTableColumns(System.Data.DataTable)">
+            <summary>
+            Adds missing columns based upon the current layout to the passed in table
+            </summary>
+            <param name="table"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.DataConversionTools.LogMessage(System.String,ZyTax.ZMS.Common.Contracts.Indicators.ErrorLevel,ZyTax.ZMS.Common.Contracts.Indicators.Bookmark,System.String)">
+            <summary>
+            Logs the message to the process logs
+            </summary>
+            <param name="text"></param>
+            <param name="errorLevel"></param>
+            <param name="bookmark"></param>
+            <param name="bookmarkValue"></param>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.DataConversionTools.DataService">
+            <summary>
+            The dataservice
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.DataConversionTools.JobId">
+            <summary>
+            The process headers job id
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.ImportBusinessEntities(System.Object,System.Int32,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Imports Business Entities, uses the job id to log details to the process log
+            </summary>
+            <param name="businessEntities"></param>
+            <param name="masterCompanyId"></param>
+            <param name="matchOnly"></param>
+            <param name="updateMatches"></param>
+            <param name="terminateNewRecords"></param>
+            <returns></returns>  
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.ImportBusinessEntities(System.Collections.Generic.List{ZyTax.ZMS.Common.Contracts.BusinessObjects.BusinessEntityDC},System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Imports Business Entities, uses the job id to log details to the process log
+            </summary>
+            <param name="businessEntities"></param>
+            <param name="masterCompanyId"></param>
+            <param name="matchOnly"></param>
+            <param name="updateMatches"></param>
+            <param name="terminateNewRecords"></param>
+            <param name="scrubData"></param>
+            <returns></returns>  
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.DetermineCurrentBusinessAccount(ZyTax.ZMS.Common.Contracts.BusinessObjects.BusinessAccountDC,ZyTax.ZMS.Common.Contracts.BusinessObjects.BusinessAccountDC,System.Boolean,System.Boolean,System.Collections.Generic.List{System.Int32},ZyTax.ZMS.Common.Contracts.Services.BusinessAccountResult_5_5_0,ZyTax.ZMS.Common.Contracts.Services.BusinessEntityImportResultSummary_5_5_0)">
+            <summary>
+            
+            </summary>
+            <param name="dbBusinessAccount"></param>
+            <param name="importedBusinessAccount"></param>
+            <param name="updateMatches"></param>
+            <param name="matchOnly"></param>
+            <param name="alreadyProcessedBusinessAccountIds"></param>
+            <param name="currentAccountResult"></param>
+            <param name="results"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.DoesLockedBusinessAccountExist(System.Int32)">
+            <summary>
+            Looks for locked date on business account.  Returns true if a locked date exists.
+            </summary>
+            <param name="businessEntityId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.#ctor(ZyTax.ZMS.Common.DataAccess.API.DataService,System.Int32,System.String,System.Int32)">
+            <summary>
+            Constructor which supports direct calls to import BE and import locations
+            </summary>
+            <param name="dataService"></param>
+            <param name="companyId"></param>
+            <param name="userIdentity"></param>
+            <param name="jobId"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.LoggingEnabled(ZyTax.ZMS.Common.Contracts.Indicators.ErrorLevel)">
+            <summary>
+            Based upon the company setting, throttle the level of logging
+            </summary>
+            <param name="errorLevel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.Log(System.String,ZyTax.ZMS.Common.Contracts.Indicators.ErrorLevel)">
+            <summary>
+            Log message to the process logs
+            </summary>
+            <param name="text"></param>
+            <param name="errorLevel"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.Log(System.String,ZyTax.ZMS.Common.Contracts.Indicators.ErrorLevel,ZyTax.ZMS.Common.Contracts.Indicators.Bookmark,System.String)">
+            <summary>
+            Log message to the process logs
+            </summary>
+            <param name="text"></param>
+            <param name="errorLevel"></param>
+            <param name="bookmark"></param>
+            <param name="bookmarkValue"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.ImportScheduleTransactions(ZyTax.ZMS.Common.DataImport.ImportScheduleTransactionsRequest)">
+            <summary>
+            Imports raw schedule transactions into the system
+            </summary>
+            <param name="importParameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.ImportScheduleTransaction(ZyTax.ZMS.Common.Contracts.BusinessObjects.ScheduleTransactionDC,System.Nullable{System.DateTime},System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Boolean,System.String)">
+            <summary>
+            Imports a single raw transaction - which could make several schedule transaction records
+            </summary>
+            <param name="scheduleTransaction"></param>
+            <param name="limitTaxSessionsByEndPeriod"></param>
+            <param name="limitTaxSessionsByJurisdiction"></param>
+            <param name="limitTaxSessionsByTaxpayerType"></param>
+            <param name="primarySelectionType"></param>
+            <param name="secondarySelectionType"></param>
+            <param name="targetEndPeriod"></param>
+            <param name="applyProfiles"></param>
+            <param name="correctionType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.PeformCorrections(ZyTax.ZMS.Common.Contracts.BusinessObjects.ScheduleTransactionDC,System.Nullable{System.DateTime},System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            
+            </summary>
+            <param name="inputTransaction"></param>
+            <param name="limitTaxSessionsByEndPeriod"></param>
+            <param name="limitTaxSessionsByJurisdiction"></param>
+            <param name="limitTaxSessionsByTaxpayerType"></param>
+            <param name="primarySelectionType"></param>
+            <param name="secondarySelectionType"></param>
+            <param name="targetEndPeriod"></param>
+            <param name="effectiveDate"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.OmitTaxSession(System.Nullable{System.DateTime},System.String,System.String,ZyTax.ZMS.Common.Contracts.BusinessObjects.HeaderSequenceDC)">
+            <summary>
+            Based upon user input, we can filter out loading to all tax sessions except the one ending with this end period
+            </summary>
+            <param name="limitTaxSessionsByEndPeriod"></param>
+            <param name="limitTaxSessionsByJurisdiction"></param>
+            <param name="limitTaxSessionsByTaxpayerType"></param>
+            <param name="headerSequence"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.SaveTransaction(ZyTax.ZMS.Common.Contracts.BusinessObjects.ScheduleTransactionDC,System.Boolean)">
+            <summary>
+            Saves the transaction
+            </summary>
+            <param name="transaction"></param>
+            <param name="updateExistingTransactions"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.QueueReturnConversions(ZyTax.ZMS.Common.DataImport.ImportScheduleTransactionsRequest)">
+            <summary>
+            Setup data for conversion
+            </summary>
+            <param name="importParameters"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.CreateTransactionCopy(ZyTax.ZMS.Common.Contracts.BusinessObjects.ScheduleTransactionDC,ZyTax.ZMS.Common.Contracts.BusinessObjects.ScenarioScheduleDC,System.DateTime)">
+            <summary>
+            
+            </summary>
+            <param name="scheduleTransaction"></param>
+            <param name="scenario"></param>
+            <param name="effectiveDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.MatchesDetails(ZyTax.ZMS.Common.Contracts.BusinessObjects.ScenarioScheduleDC,ZyTax.ZMS.Common.Contracts.BusinessObjects.ScheduleTransactionDC)">
+            <summary>
+            Match on scenario details
+            </summary>
+            <param name="scenario"></param>
+            <param name="scheduleTransaction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.MatchesAccounts(ZyTax.ZMS.Common.Contracts.BusinessObjects.ScenarioScheduleDC,ZyTax.ZMS.Common.Contracts.BusinessObjects.ScheduleTransactionDC)">
+            <summary>
+            Match scenario by accounts
+            </summary>
+            <param name="scenario"></param>
+            <param name="scheduleTransaction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.MatchesLocations(ZyTax.ZMS.Common.Contracts.BusinessObjects.ScenarioScheduleDC,ZyTax.ZMS.Common.Contracts.BusinessObjects.ScheduleTransactionDC)">
+            <summary>
+            Scenario match of locations
+            </summary>
+            <param name="scenario"></param>
+            <param name="scheduleTransaction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.AssignTaxSession(ZyTax.ZMS.Common.Contracts.BusinessObjects.ScheduleTransactionDC,System.DateTime,System.String,System.String,System.Nullable{System.DateTime},ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResult)">
+            <summary>
+            Assign a tax session to a raw transaction
+            Method will modify the result.ErrorMessage Property with any details
+            </summary>
+            <param name="scheduleTransaction"></param>
+            <param name="effectiveDate"></param>
+            <param name="primarySelectionType"></param>
+            <param name="secondarySelectionType"></param>
+            <param name="targetEndPeriod"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.GetSessionCalcWithTaxpayerPreferences(ZyTax.ZMS.Common.Contracts.BusinessObjects.HeaderSequenceDC,ZyTax.ZMS.Common.Contracts.BusinessObjects.ScheduleTransactionDC,ZyTax.ZMS.Common.Contracts.BusinessObjects.TaxpayerPreferenceDC,System.String)">
+            <summary>
+            Finds an open tax session based upon late loads, otherwise will create an amended tax session
+            </summary>
+            <param name="filedSession"></param>
+            <param name="transaction"></param>
+            <param name="taxpayerPreference"></param>
+            <param name="selectionType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.GetSession(ZyTax.ZMS.Common.Contracts.BusinessObjects.ScheduleTransactionDC,ZyTax.ZMS.Common.Contracts.BusinessObjects.TaxpayerPreferenceDC,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            Gets a tax session
+            </summary>
+            <param name="transaction"></param>
+            <param name="taxpayerPreference"></param>
+            <param name="startPeriod"></param>
+            <param name="endPeriod"></param>
+            <param name="selectionType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.SetArchiveSession(ZyTax.ZMS.Common.Contracts.BusinessObjects.HeaderSequenceDC,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="filedSession"></param>
+            <param name="sequence"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.ConvertScheduleTransactions(System.Object,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            This method converts the wsdl schedule transaction objects to the DCs,
+            normalizes all the fields, and loads/imports the locations and business entities.
+            </summary>
+            <param name="wsdlTransactions"></param>
+            <param name="businessEntityMatchOnly"></param>
+            <param name="businessEntityUpdateMatches"></param>
+            <param name="terminateNewBusinessEntities"></param>
+            <param name="locationsMatchOnly"></param>
+            <param name="locationsUpdateMatches"></param>
+            <param name="terminateNewLocations"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.GetProductByAlternateProductCode(System.String,System.String,System.String,System.DateTime)">
+            <summary>
+            Check to see if the provided product can be tied to an alternate product code
+            
+            </summary>
+            <param name="countryCode"></param>
+            <param name="jurisdiction"></param>
+            <param name="alternateProductCode"></param>
+            <param name="effectiveDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.GetLicensedJurisdictions(System.String)">
+            <summary>
+            Determines the acceptable jurisdictions for a given user based on the license key 
+            and company accounts. 
+            </summary>
+            <remarks>
+            This function doesn't handle international transactions.
+            </remarks>
+            <param name="countryCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.GetLicensedTaxpayerTypes(System.DateTime,System.Collections.Generic.List{ZyTax.ZMS.Common.Contracts.BusinessObjects.JurisdictionDC})">
+            <summary>
+            Determines the acceptable taxpayer types associated with a given list of jurisdictions as well as user defined filters.
+            
+            When this method is called, it either needs the country code and jurisdiction params passed in with a null for the jurisdictions list OR
+            it needs the jurisdictions list to be populated.
+            </summary>
+            <param name="activityDate"></param>
+            <param name="jurisdictions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.GetStartAndEndDates(System.Nullable{System.DateTime},ZyTax.ZMS.Common.Contracts.BusinessObjects.TaxpayerPreferenceDC,System.Nullable{System.DateTime}@,System.Nullable{System.DateTime}@)">
+            <summary>
+            Using taxpayer preference, determing the activity date to based the taxing period 
+            Note: It is a requirement that a taxpayer pref record exists as part of the return definition
+            </summary>
+            <param name="activityDate"></param>
+            <param name="taxpayerPreference"></param>
+            <param name="startPeriod"></param>
+            <param name="endPeriod"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.GetCompanyAccount(ZyTax.ZMS.Common.Contracts.BusinessObjects.ScheduleTransactionDC,System.DateTime)">
+            <summary>
+            Gets the company account for the given taxpayer type
+            </summary>
+            <param name="transaction"></param>
+            <param name="effectiveDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.GetBusinessEntityByAccount(System.Int32)">
+            <summary>
+            Gets a business entity by a business account and loads the child account on the entity.
+            </summary>
+            <param name="businessAccountId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.GetBusinessEntity(System.Int32)">
+            <summary>
+            Gets a business entity by a business account and loads the child account on the entity.
+            </summary>
+            <param name="businessEntityId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.ScrubImportResultSummary(ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResultSummary)">
+            <summary>
+            A method to scrub the data leaving only errors for smaller xml size
+            </summary>
+            <param name="importResultSummary"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.ConvertCsvWithHeadersToDatatable(ZyTax.ZMS.Common.Contracts.BusinessObjects.DocumentDC)">
+            <summary>
+            Takes the passed in CSV file and converts it to a data table
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.SaveTransactionsAsCsv(System.Collections.Generic.List{ZyTax.ZMS.Common.Contracts.BusinessObjects.ScheduleTransactionDC})">
+            <summary>
+            Create a csv from a list of schedule transaction dc's.  Save to documents table
+            </summary>
+            <param name="scheduleTransactions"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.CreateCsvFromScheduleTransactionDataTable(System.Data.DataTable)">
+            <summary>
+            take a datatable and create a csv file.  Save csv file to the documents table
+            </summary>
+            <param name="scheduleTransactionDataTable"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.CreateMasterScheduleTransactionCsvTable">
+            <summary>
+            Creates a master data table based on the current schedule transaction dc
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.ImportLocations(System.Object,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Import Locations
+            </summary>
+            <param name="locations"></param>       
+            <param name="matchOnly"></param>
+            <param name="updateMatches"></param>
+            <param name="terminateNewRecords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.ImportLocations(System.Collections.Generic.List{ZyTax.ZMS.Common.Contracts.BusinessObjects.LocationDC},System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Import Locations
+            </summary>
+            <param name="importedLocations"></param>       
+            <param name="matchOnly"></param>
+            <param name="updateMatches"></param>
+            <param name="terminateNewRecords"></param>
+            <param name="scrubData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.ValidTerminalCode(System.String)">
+            <summary>
+            Validate if the provided terminal code exists in the active terminal table
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Import.AddLocationToListIfNotDuplicateRecord(System.Collections.Generic.List{ZyTax.ZMS.Common.Contracts.BusinessObjects.LocationDC},ZyTax.ZMS.Common.Contracts.BusinessObjects.LocationDC)">
+            <summary>
+            This method adds a location to the passed in list if and only if it does not already exist within the list
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.DataImport.ImportGroupSummary">
+            <summary>
+            Summary of all the batches in a group of imports
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ImportGroupSummary.XsltFile">
+            <summary>
+            Defines which xslt file to use to transform this output
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ImportGroupSummary.LoadId">
+            <summary>
+            Load Id associated with each batch in the group
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ImportGroupSummary.ProcessHeaders">
+            <summary>
+            The list of process headers included in the group imported
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ImportScheduleTransactionsRequest.BusinessEntityIdType">
+             <summary>
+             Custom, FEIN, SSN
+             </summary>
+             <value>
+            Custom
+            FEIN
+            SSN
+             </value>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ImportScheduleTransactionsRequest.CorrectionType">
+            <summary>
+            INSERT, UPDATE, or CORRECT
+            </summary>
+            <value>
+            INSERT - Insert all records, may result in dupes.
+            UPDATE - Update records that match the SourceSystemId in open sessions, insert all others.
+            CORRECT - Replaces records in open sessions, creates correction records for matching transactions in filed sessions.
+            </value>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.DataAdaptor.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.DataAdaptor.#ctor(ZyTax.ZMS.Common.DataImport.Import,ZyTax.ZMS.Common.DataAccess.API.DataService)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="importer"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.DataAdaptor.TransmitDataFile(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Standard CSV mapper Data File Adaptor
+            </summary>
+            <param name="inputFileId"></param>
+            <param name="requestId"></param>
+            <param name="headers"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.DataAdaptor.TransmitAltaDataFile(System.Int32,System.Int32)">
+            <summary>
+            Alta CSV mapper Data File Adaptor
+            </summary>
+            <param name="inputFileId"></param>
+            <param name="requestId"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.DataAdaptor.TransmitTdwDataFile(System.Int32,System.Int32)">
+            <summary>
+            TDW csv mapper data file adaptor
+            </summary>
+            <param name="inputFileId"></param>
+            <param name="requestId"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.DataAdaptor.TransmitData(ZyTax.ZMS.Common.DataImport.Mappers.TransmissionData)">
+            <summary>
+            All the Public Transmit Methods, will build a list of raw transactions and send that data into this method to be sent to the web service
+            </summary>
+            <param name="transmissionData"></param>      
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.DataAdaptor.TransmitNextBatch(ZyTax.ZMS.Common.DataImport.Mappers.TransmissionData)">
+            <summary>
+            Create scheduled task for each batch
+            </summary>
+            <param name="transmissionData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.DataAdaptor.TransmitSupportingData(ZyTax.ZMS.Common.DataImport.Mappers.TransmissionData,System.Boolean,System.Boolean)">
+            <summary>
+            Given a collection of raw transactions, pluck off the locations and BEs and import those synchronously
+            </summary>
+            <param name="transmissionData"></param>
+            <param name="transmitBusinessEntities"></param>
+            <param name="transmitLocations"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.DataAdaptor.FillTransmissionData(System.Int32)">
+            <summary>
+            Fills the transmission data object from the request
+            </summary>
+            <param name="requestId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.DataAdaptor.LocationExists(System.Collections.Generic.List{ZyTax.ZMS.Common.Contracts.Services.Location_5_5_0},ZyTax.ZMS.Common.Contracts.Services.Location_5_5_0)">
+            <summary>
+            returns true if the existing item is found to already be in the list
+            </summary>
+            <param name="list"></param>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.DataAdaptor.BusinessEntityExists(System.Collections.Generic.List{ZyTax.ZMS.Common.Contracts.Services.BusinessEntity_5_5_0},ZyTax.ZMS.Common.Contracts.Services.BusinessEntity_5_5_0)">
+            <summary>
+            returns true if the existing item is found to already be in the list
+            business entities must have one business account
+            </summary>
+            <param name="list"></param>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.Mappers.DataAdaptor.Importer">
+            <summary>
+            The importer to be used
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.Mappers.DataAdaptor.DataService">
+            <summary>
+            The data service to be used
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.Mappers.DataAdaptor.CompanyId">
+            <summary>
+            The company for this import
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.Mappers.DataAdaptor.LoweredUserName">
+            <summary>
+            The user for this import
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.Mappers.DataAdaptor.MainJobId">
+            <summary>
+            the main job that will set up the batch imports
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.DataMapperBase.#ctor">
+            <summary>
+            the constructor
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.DataMapperBase.#ctor(ZyTax.ZMS.Common.DataAccess.API.DataService)">
+            <summary>
+            the constructor
+            </summary>
+            <param name="dataService"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.DataMapperBase.GetSupplementalFields">
+            <summary>
+            gets a list of the supplemental fields
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:ZyTax.ZMS.Common.DataImport.Mappers.DataMapperBase._scenarioFields">
+            <summary>
+            Fields to be loaded into as scenario fields and the related scenario field name
+            </summary>\
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.DataMapperBase.NormalizeRawTransactions(System.Collections.Generic.List{ZyTax.ZMS.Common.Contracts.Services.ScheduleTransaction_5_5_0})">
+            <summary>
+            method ensure every raw transaction has required fields such as a load id defined
+            </summary>
+            <param name="rawTransactions"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.DataMapperBase.NormalizeBusinessEntity(ZyTax.ZMS.Common.Contracts.Services.BusinessEntity_5_5_0)">
+            <summary>
+            Sets the default id type and id code and future data scrubbing methods
+            Also sets the default search criteria
+            Server side will trim all fields and work with defaulting required fields such as the BA.LicenseNumber
+            Only need to do client side specific scrubbing here
+            </summary>
+            <param name="businessEntity"></param>        
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.DataMapperBase.ApplyDefaultBusinessEntityIdTypeAndIdCode(ZyTax.ZMS.Common.Contracts.Services.BusinessEntity_5_5_0)">
+            <summary>
+            Sets the default id type and id code
+            </summary>
+            <param name="businessEntity"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.DataMapperBase.HasValue(System.String)">
+            <summary>
+            Safely takes a nullable string value, trims if not null, and returns if the value is an empty or null string
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.Mappers.DataMapperBase.RawScheduleTransactions">
+            <summary>
+            The list of imported raw transactions
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.Mappers.DataMapperBase.JobId">
+            <summary>
+            The process header job id
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.Mappers.DataMapperBase.CompanyId">
+            <summary>
+            The Company importing data
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.StandardAltaMapper.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.StandardAltaMapper.LoadScheduleTransactionsFromDataFile(System.Int32)">
+            <summary>
+            Maps the csv to a raw transaction
+            </summary>
+            <param name="docId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.StandardCsvMapper.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.StandardCsvMapper.LoadScheduleTransactionsFromDataFile(System.Int32,System.Boolean)">
+            <summary>
+            Data File Import: Opens the data file and populates the schedule transaction data structure
+            </summary>
+            <param name="docId"></param>
+            <param name="headers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.StandardCsvMapper.MapTransactionFromCsv(ZyTax.ZMS.Common.DataAccess.ZmsDataReader,System.Int32)">
+            <summary>
+            maps the incoming record to a raw transaction
+            
+            The following are being handled by later processing and do not need to be done in the mapper
+            -trimming of locations and business entities property values
+            ---- the import service will trim all properties of these objects
+            
+            -assigning of the transaction load id
+            ---- the parent ClientDataMapperBase will apply a GUID to all raw transactions
+            
+            -assigning of the default BE FEIN
+            ---- the parent application will assign default values to any empty id codes based upon user input
+            
+            -assigning the BE priority search
+            ---- the parent ClientDataMapperBase will assign the priority levels based upon the supplied fields on the BE
+            
+            -assing the effective dates
+            ---- the import service will assign effective dates to the locations and BE/BA based upon the activity date of the raw transaction
+            </summary>
+            <param name="zmsReader"></param>
+            <param name="sourceIndex"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.StandardTdwMapper.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.StandardTdwMapper.LoadScheduleTransactionsFromTdwFile(System.Int32)">
+            <summary>
+            TDW File Import: Opens the TDW file and populates the schedule transaction data structure
+            </summary>
+            <param name="docId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.StandardTdwMapper.MapTransactionFromTdw(ZyTax.ZMS.Common.DataAccess.ZmsDataReader,System.Int32,System.Data.DataRow)">
+            <summary>
+            maps the incoming record to a raw transaction
+            
+            The following are being handled by later processing and do not need to be done in the mapper
+            -trimming of locations and business entities property values
+            ---- the import service will trim all properties of these objects
+            
+            -assigning of the transaction load id
+            ---- the parent ClientDataMapperBase will apply a GUID to all raw transactions
+            
+            -assigning of the default BE FEIN
+            ---- the parent application will assign default values to any empty id codes based upon user input
+            
+            -assigning the BE priority search
+            ---- the parent ClientDataMapperBase will assign the priority levels based upon the supplied fields on the BE
+            
+            -assing the effective dates
+            ---- the import service will assign effective dates to the locations and BE/BA based upon the activity date of the raw transaction
+            </summary>
+            <param name="zmsReader"></param>
+            <param name="sourceIndex"></param>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.DataImport.Mappers.TransmissionData">
+            <summary>
+            A collection of all the import options
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.DataImport.Mappers.TransmissionData.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResultSummary">
+            <summary>
+            Parent Result Object for the Schedule Transaction Import
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResultSummary.XsltFile">
+            <summary>
+            Defines which xlst file to use to tranform this output
+            </summary>
+            
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResultSummary.LoadId">
+            <summary>
+            Load Id which identifies all transactions processed
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResultSummary.DeleteLoadLink">
+            <summary>
+            place holder for a link to delete all transactions using the load id
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResultSummary.Description">
+            <summary>
+            Description of the import batch job
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResultSummary.Status">
+            <summary>
+            Status message of the import
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResultSummary.NumberProcessed">
+            <summary>
+            Number of schedule transaction records processed
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResultSummary.NumberSuccessfullyImported">
+            <summary>
+            Number of schedule transaction records successfully processed (inserted or updated)
+            </summary>        
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResultSummary.NumberInserted">
+            <summary>
+            Number of schedule transaction records inserted
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResultSummary.NumberUpdated">
+            <summary>
+            Number of schedule transactions that were updated
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResultSummary.NumberFailed">
+            <summary>
+            Number of schedule transaction records failed to import
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResultSummary.TaxSessionImportResult">
+            <summary>
+            A list of all the tax sessions effected by the import and the transactions processed for that tax session
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResultSummary.ScheduleTransactionImportResults">
+            <summary>
+            Result of every raw transaction imported into the ZMS system
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResultSummary.LocationImportResults">
+            <summary>
+            Result of every Location imported into the ZMS system
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResultSummary.BusinessEntityImportResults">
+            <summary>
+            Result of ever Business Entity Imported into the ZMS system
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResultSummary.UnassignedScheduleTransactions">
+            <summary>
+            the list of Schedule Transactions the were not assigned to a tax session
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResult">
+            <summary>
+            Result detail for a specific schedule transaction
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResult.HeaderId">
+            <summary>
+            Maps to header id of the tax session
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResult.HeaderSequence">
+            <summary>
+            Maps to header_sequence as decimal(2,0)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResult.ReportLine">
+            <summary>
+            Maps to report_line as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResult.SourceSystemId">
+            <summary>
+            Maps to source_system_id as nvarchar(35)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResult.Status">
+            <summary>
+            Status of the transactions
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.ScheduleTransactionImportResult.ErrorMessage">
+            <summary>
+            Error Message for a failed transaction
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.DataImport.TaxSessionImportResult">
+            <summary>
+            Tax Sessions effected by the import and the transactions applied to that tax session
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.TaxSessionImportResult.Description">
+            <summary>
+            Description of the tax session
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.TaxSessionImportResult.HeaderId">
+            <summary>
+            Tax Session Header ID
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.TaxSessionImportResult.HeaderSequence">
+            <summary>
+            Tax Session Header ID
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.DataImport.TaxSessionImportResult.TransactionCount">
+            <summary>
+            Number of schedule transaction records within this tax session
+            </summary>
+        </member>
+    </members>
+</doc>

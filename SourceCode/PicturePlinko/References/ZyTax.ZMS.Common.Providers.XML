@@ -1,0 +1,340 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZyTax.ZMS.Common.Providers</name>
+    </assembly>
+    <members>
+        <member name="T:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListener">
+            <summary>
+            A <see cref="T:System.Diagnostics.TraceListener"/> that writes to a database, formatting the output with an <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.ILogFormatter"/>.
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListener.#ctor(Microsoft.Practices.EnterpriseLibrary.Data.Database,System.String,System.String,Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.ILogFormatter)">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener"/>.
+            </summary>
+            <param name="database">The database for writing the log.</param>
+            <param name="writeLogStoredProcName">The stored procedure name for writing the log.</param>
+            <param name="addCategoryStoredProcName">The stored procedure name for adding a category for this log.</param>
+            <param name="formatter">The formatter.</param>        
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListener.Write(System.String)">
+            <summary>
+            The Write method 
+            </summary>
+            <param name="message">The message to log</param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListener.WriteLine(System.String)">
+            <summary>
+            The WriteLine method.
+            </summary>
+            <param name="message">The message to log</param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListener.TraceData(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.Object)">
+            <summary>
+            Delivers the trace data to the underlying database.
+            </summary>
+            <param name="eventCache">The context information provided by <see cref="N:System.Diagnostics"/>.</param>
+            <param name="source">The name of the trace source that delivered the trace data.</param>
+            <param name="eventType">The type of event.</param>
+            <param name="id">The id of the event.</param>
+            <param name="data">The data to trace.</param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListener.GetSupportedAttributes">
+            <summary>
+            Declare the supported attributes for <see cref="T:Microsoft.Practices.EnterpriseLibrary.Logging.Database.FormattedDatabaseTraceListener"/>
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListener.ValidateParameters">
+            <summary>
+            Validates that enough information exists to attempt executing the stored procedures
+            </summary>
+            <returns>A boolean indicating whether the parameters for the LogEntry configuration are valid.</returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListener.ExecuteStoredProcedure(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry)">
+            <summary>
+            Executes the stored procedures
+            </summary>
+            <param name="logEntry">The LogEntry to store in the database</param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListener.ExecuteWriteLogStoredProcedure(System.Int32,System.Int32,System.Diagnostics.TraceEventType,System.String,System.DateTime,System.String,System.String,System.String,System.String,System.String,System.String,System.String,Microsoft.Practices.EnterpriseLibrary.Data.Database)">
+            <summary>
+            Executes the WriteLog stored procedure
+            </summary>
+            <param name="eventId">The event id for this LogEntry.</param>
+            <param name="priority">The priority for this LogEntry.</param>
+            <param name="severity">The severity for this LogEntry.</param>
+            <param name="title">The title for this LogEntry.</param>
+            <param name="timeStamp">The timestamp for this LogEntry.</param>
+            <param name="machineName">The machine name for this LogEntry.</param>
+            <param name="appDomainName">The appDomainName for this LogEntry.</param>
+            <param name="processId">The process id for this LogEntry.</param>
+            <param name="processName">The processName for this LogEntry.</param>
+            <param name="managedThreadName">The managedthreadName for this LogEntry.</param>
+            <param name="win32ThreadId">The win32threadID for this LogEntry.</param>
+            <param name="message">The message for this LogEntry.</param>
+            <param name="db">An instance of the database class to use for storing the LogEntry</param>
+            <returns>An integer for the LogEntry Id</returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListener.ExecuteWriteLogStoredProcedure(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry,Microsoft.Practices.EnterpriseLibrary.Data.Database,System.Data.Common.DbTransaction)">
+            <summary>
+            Executes the WriteLog stored procedure
+            </summary>
+            <param name="logEntry">The LogEntry to store in the database.</param>
+            <param name="db">An instance of the database class to use for storing the LogEntry</param>
+            <param name="transaction">The transaction that wraps around the execution calls for storing the LogEntry</param>
+            <returns>An integer for the LogEntry Id</returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListener.ExecuteAddCategoryStoredProcedure(Microsoft.Practices.EnterpriseLibrary.Logging.LogEntry,System.Int32,Microsoft.Practices.EnterpriseLibrary.Data.Database,System.Data.Common.DbTransaction)">
+            <summary>
+            Executes the AddCategory stored procedure
+            </summary>
+            <param name="logEntry">The LogEntry to store in the database.</param>
+            <param name="logID">The unique identifer for the LogEntry as obtained from the WriteLog Stored procedure.</param>
+            <param name="db">An instance of the database class to use for storing the LogEntry</param>
+            <param name="transaction">The transaction that wraps around the execution calls for storing the LogEntry</param>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListenerData">
+            <summary>
+            Configuration object for a <see cref="T:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListener"/>.
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListenerData.#ctor">
+            <summary>
+            Initializes a <see cref="T:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListenerData"/>.
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListenerData.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Initializes a named instance of <see cref="T:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListenerData"/> with 
+            name, stored procedure name, databse instance name, and formatter name.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="writeLogStoredProcName">The stored procedure name for writing the log.</param>
+            <param name="addCategoryStoredProcName">The stored procedure name for adding a category for this log.</param>
+            <param name="databaseInstanceName">The database instance name.</param>
+            <param name="formatterName">The formatter name.</param>        
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListenerData.#ctor(System.String,System.String,System.String,System.String,System.String,System.Diagnostics.TraceOptions,System.Diagnostics.SourceLevels)">
+            <summary>
+            Initializes a named instance of <see cref="T:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListenerData"/> with 
+            name, stored procedure name, databse instance name, and formatter name.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="writeLogStoredProcName">The stored procedure name for writing the log.</param>
+            <param name="addCategoryStoredProcName">The stored procedure name for adding a category for this log.</param>
+            <param name="databaseInstanceName">The database instance name.</param>
+            <param name="formatterName">The formatter name.</param>
+            <param name="traceOutputOptions">The trace options.</param>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListenerData.DatabaseInstanceName">
+            <summary>
+            Gets and sets the database instance name.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListenerData.WriteLogStoredProcName">
+            <summary>
+            Gets and sets the stored procedure name for writing the log.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListenerData.AddCategoryStoredProcName">
+            <summary>
+            Gets and sets the stored procedure name for adding a category for this log.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Providers.FormattedOracleDatabaseTraceListenerData.Formatter">
+            <summary>
+            Gets and sets the formatter name.
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.Providers.OracleSiteMapProvider">
+            <summary>
+            Summary description for SqlSiteMapProvider
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.OracleSiteMapProvider.IsAccessibleToUser(System.Web.HttpContext,System.Web.SiteMapNode)">
+            <summary>
+            Trims the list to use roles only defined in the database.
+            </summary>
+            <param name="context"></param>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.Providers.LocalizedModuleSiteMapProvider">
+            <summary>
+            Provides a localized sitemap to using a resource file.
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.LocalizedModuleSiteMapProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Initializes the System.Web.SiteMapProvider implementation, 
+            including any resources that are needed to load sitemap data from persistant storage.
+            </summary>
+            <param name="name"></param>
+            <param name="attributes"></param>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.Providers.MultiplePageOraclePersonalizationProvider">
+            <summary>
+            Implements a personalization provider that can group multiple pages and uses Oracle.
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.MultiplePageOraclePersonalizationProvider.FindState(System.Web.UI.WebControls.WebParts.PersonalizationScope,System.Web.UI.WebControls.WebParts.PersonalizationStateQuery,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Returns a collection of PersonalizationStateInfo objects, based on the specified scope and parameters.
+            </summary>
+            <param name="scope"></param>
+            <param name="query"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="totalRecords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.MultiplePageOraclePersonalizationProvider.GetCountOfState(System.Web.UI.WebControls.WebParts.PersonalizationScope,System.Web.UI.WebControls.WebParts.PersonalizationStateQuery)">
+            <summary>
+            Returns the number of rows in the underlying datastore that exist for the specified scope parameter.
+            </summary>
+            <param name="scope"></param>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.MultiplePageOraclePersonalizationProvider.LoadPersonalizationBlobs(System.Web.UI.WebControls.WebParts.WebPartManager,System.String,System.String,System.Byte[]@,System.Byte[]@)">
+            <summary>
+            Loads personalization data from the underlying data store, based on the parameters.
+            </summary>
+            <param name="webPartManager"></param>
+            <param name="path"></param>
+            <param name="userName"></param>
+            <param name="sharedDataBlob"></param>
+            <param name="userDataBlob"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.MultiplePageOraclePersonalizationProvider.ResetPersonalizationBlob(System.Web.UI.WebControls.WebParts.WebPartManager,System.String,System.String)">
+            <summary>
+            Deletes personalization data from the underlying data store, based on the parameters.
+            </summary>
+            <param name="webPartManager"></param>
+            <param name="path"></param>
+            <param name="username"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.MultiplePageOraclePersonalizationProvider.ResetState(System.Web.UI.WebControls.WebParts.PersonalizationScope,System.String[],System.String[])">
+            <summary>
+            Deletes personalization data from the underlying data store, based on the parameters.
+            </summary>
+            <param name="scope"></param>
+            <param name="paths"></param>
+            <param name="usernames"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.MultiplePageOraclePersonalizationProvider.ResetUserState(System.String,System.DateTime)">
+            <summary>
+            Deletes user personalization data from the underlying data store, based on the parameters.
+            </summary>
+            <param name="path"></param>
+            <param name="userInactiveSinceDate"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.MultiplePageOraclePersonalizationProvider.SavePersonalizationBlob(System.Web.UI.WebControls.WebParts.WebPartManager,System.String,System.String,System.Byte[])">
+            <summary>
+            Saves raw personalization data to the underlying data store.
+            </summary>
+            <param name="webPartManager"></param>
+            <param name="path"></param>
+            <param name="username"></param>
+            <param name="dataBlob"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.MultiplePageOraclePersonalizationProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Implements the initialization procedures required for a MultiplePageOraclePersonalizationProvider.
+            This method is not intended to used directly from your code.
+            </summary>
+            <param name="name"></param>
+            <param name="configSettings"></param>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Providers.MultiplePageOraclePersonalizationProvider.GroupName">
+            <summary>
+            The name for a set of pages that share personalization state.
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.Providers.MultiplePageSqlPersonalizationProvider">
+            <summary>
+            Implements a personalization provider that can group multiple pages and uses Microsoft SQl Server.
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.MultiplePageSqlPersonalizationProvider.FindState(System.Web.UI.WebControls.WebParts.PersonalizationScope,System.Web.UI.WebControls.WebParts.PersonalizationStateQuery,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Returns a collection of PersonalizationStateInfo objects, based on the specified scope and parameters.
+            </summary>
+            <param name="scope"></param>
+            <param name="query"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="totalRecords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.MultiplePageSqlPersonalizationProvider.GetCountOfState(System.Web.UI.WebControls.WebParts.PersonalizationScope,System.Web.UI.WebControls.WebParts.PersonalizationStateQuery)">
+            <summary>
+            Returns the number of rows in the underlying datastore that exist for the specified scope parameter.
+            </summary>
+            <param name="scope"></param>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.MultiplePageSqlPersonalizationProvider.LoadPersonalizationBlobs(System.Web.UI.WebControls.WebParts.WebPartManager,System.String,System.String,System.Byte[]@,System.Byte[]@)">
+            <summary>
+            Loads personalization data from the underlying data store, based on the parameters.
+            </summary>
+            <param name="webPartManager"></param>
+            <param name="path"></param>
+            <param name="userName"></param>
+            <param name="sharedDataBlob"></param>
+            <param name="userDataBlob"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.MultiplePageSqlPersonalizationProvider.ResetPersonalizationBlob(System.Web.UI.WebControls.WebParts.WebPartManager,System.String,System.String)">
+            <summary>
+            Deletes personalization data from the underlying data store, based on the parameters.
+            </summary>
+            <param name="webPartManager"></param>
+            <param name="path"></param>
+            <param name="username"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.MultiplePageSqlPersonalizationProvider.ResetState(System.Web.UI.WebControls.WebParts.PersonalizationScope,System.String[],System.String[])">
+            <summary>
+            Deletes personalization data from the underlying data store, based on the parameters.
+            </summary>
+            <param name="scope"></param>
+            <param name="paths"></param>
+            <param name="usernames"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.MultiplePageSqlPersonalizationProvider.ResetUserState(System.String,System.DateTime)">
+            <summary>
+            Deletes user personalization data from the underlying data store, based on the parameters.
+            </summary>
+            <param name="path"></param>
+            <param name="userInactiveSinceDate"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.MultiplePageSqlPersonalizationProvider.SavePersonalizationBlob(System.Web.UI.WebControls.WebParts.WebPartManager,System.String,System.String,System.Byte[])">
+            <summary>
+            Saves raw personalization data to the underlying data store.
+            </summary>
+            <param name="webPartManager"></param>
+            <param name="path"></param>
+            <param name="userName"></param>
+            <param name="dataBlob"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.Providers.MultiplePageSqlPersonalizationProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Implements the initialization procedures required for a MultiplePageSqlPersonalizationProvider.
+            This method is not intended to used directly from your code.
+            </summary>
+            <param name="name"></param>
+            <param name="configSettings"></param>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.Providers.MultiplePageSqlPersonalizationProvider.GroupName">
+            <summary>
+            The name for a set of pages that share personalization state.
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.Providers.SqlSiteMapProvider">
+            <summary>
+            Summary description for SqlSiteMapProvider
+            </summary>
+        </member>
+    </members>
+</doc>

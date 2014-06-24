@@ -1,0 +1,2289 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZyTax.ZMS.Determination.Engine</name>
+    </assembly>
+    <members>
+        <member name="T:ZyTax.ZMS.Determination.Engine.TransactionLineJurisdiction_5_4_0">
+            <summary>
+            Contract Class - TransactionLineJurisdiction
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.TransactionLineJurisdiction_5_4_0.SpecialJurisdictionCode">
+            <summary>
+            Maps to special_jurisdiction_code as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.TransactionLineJurisdiction_5_4_0.SpecialJurisdictionType">
+            <summary>
+            Maps to special_jurisdiction_type as nvarchar(20)
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.TransactionLine_5_4_0.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.TransactionLine_5_4_0.FreightLineAmount">
+            <summary>
+            Maps to freight_line_amount as decimal(28,10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.TransactionLine_5_4_0.OriginExciseWarehouse">
+            <summary>
+            Maps to origin_excise_warehouse as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.TransactionLine_5_4_0.DestinationExciseWarehouse">
+            <summary>
+            Maps to destination_excise_warehouse as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.TransactionLine_5_4_0.SaleExciseWarehouse">
+            <summary>
+            Maps to sale_excise_warehouse as nvarchar(20)
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Transaction_5_4_0.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Transaction_5_4_0.SellerVatNumber">
+            <summary>
+            Maps to seller_vat_number as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Transaction_5_4_0.BuyerVatNumber">
+            <summary>
+            Maps to buyer_vat_number as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Transaction_5_4_0.CustomsStatus">
+            <summary>
+            Maps to customs_status as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Transaction_5_4_0.FormAPresentedInd">
+            <summary>
+            Maps to form_a_presented_ind as nchar(1)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Transaction_5_4_0.SimplifiedProcedureInd">
+            <summary>
+            Maps to simplified_procedure_ind as nchar(1)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Transaction_5_4_0.Incoterms">
+            <summary>
+            Maps to incoterms as nvarchar(3)
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.TransactionLineJurisdiction_5_3_1">
+            <summary>
+            Contract Class - TransactionLineJurisdiction
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.TransactionLineJurisdiction_5_3_1.SpecialJurisdictionCode">
+            <summary>
+            Maps to special_jurisdiction_code as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.TransactionLineJurisdiction_5_3_1.SpecialJurisdictionType">
+            <summary>
+            Maps to special_jurisdiction_type as nvarchar(20)
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.TransactionLineJurisdiction_5_2_1">
+            <summary>
+            Contract Class - TransactionLineJurisdiction
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.TransactionLineJurisdiction_5_2_1.SpecialJurisdictionCode">
+            <summary>
+            Maps to special_jurisdiction_code as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.TransactionLineJurisdiction_5_2_1.SpecialJurisdictionType">
+            <summary>
+            Maps to special_jurisdiction_type as nvarchar(20)
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.TransactionLineJurisdiction_5_1_1">
+            <summary>
+            Contract Class - TransactionLineJurisdiction
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.TransactionLineJurisdiction_5_1_1.SpecialJurisdictionCode">
+            <summary>
+            Maps to special_jurisdiction_code as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.TransactionLineJurisdiction_5_1_1.SpecialJurisdictionType">
+            <summary>
+            Maps to special_jurisdiction_type as nvarchar(20)
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.ErrorMessages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.BuyerNotFound">
+            <summary>
+              Looks up a localized string similar to Buyer &quot;{0}&quot; does not exist or is not active for {1}..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.ExchangeRateNotFound">
+            <summary>
+              Looks up a localized string similar to Exchange Rate Not Found. The tax cannot be calculated because a component of the subtotal could not be converted to the proper currency. From: {0}, To: {1}, On Date: {2}, Of Date Type: {3}..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.InvalidAlternateProduct">
+            <summary>
+              Looks up a localized string similar to Product &quot;{0}&quot; Alternate Product &quot;{1}&quot; does not exist or is not active for {2}..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.InvalidAlternateTransportationMode">
+            <summary>
+              Looks up a localized string similar to Mode Code &quot;{0}&quot; Alternate Mode Code &quot;{1}&quot; not found..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.InvalidCity">
+            <summary>
+              Looks up a localized string similar to {2} is not a valid city in {1}, {0}.  Please update the {3} on transaction line {4}..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.InvalidCityCountyPair">
+            <summary>
+              Looks up a localized string similar to The city of {0} is not in {1} county. CountryCode: {2} Jurisdiction: {3} EffectiveDate: {4}.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.InvalidCompany">
+            <summary>
+              Looks up a localized string similar to Company &quot;{0}&quot; not found..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.InvalidCountryCode">
+            <summary>
+              Looks up a localized string similar to The value &quot;{0}&quot; is not a valid {1} Country Code..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.InvalidCounty">
+            <summary>
+              Looks up a localized string similar to {2} is not a valid county in {1}, {0}.  Please update the {3} on transaction line {4}..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.InvalidJurisdiction">
+            <summary>
+              Looks up a localized string similar to The value &quot;{0}&quot; is not a valid {1} Jurisdiction for the specified country..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.InvalidLocation">
+            <summary>
+              Looks up a localized string similar to Location &quot;{0}&quot; does not exist or is not active for {1}..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.InvalidProduct">
+            <summary>
+              Looks up a localized string similar to Product &quot;{0}&quot; does not exist or is not active for {1}..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.InvalidQuantity">
+            <summary>
+              Looks up a localized string similar to Invalid Quantity. The {0} quantity is required..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.InvalidRate">
+            <summary>
+              Looks up a localized string similar to Rate for CountryCode: {0} Jurisdiction: {1} LocalJurisdiction: {2} EffectiveDate: {3} TaxingLevel: {4} TaxType: {5} RateType: {6} RateSubtype: {7} ProductCategory: {8} was not found..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.InvalidRuleSet">
+            <summary>
+              Looks up a localized string similar to Invalid Configuration. Class &quot;{0}&quot; does not is not derived from {1}.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.InvalidSpecialJurisdiction">
+            <summary>
+              Looks up a localized string similar to Scenario specifies special jurisdiction taxation, but the name provided does not match any known special jurisdiction. CountryCode: {0}, Jurisdiction: {1}, LocalJurisdictionCode: {2}, LocalJurisdictionType: {3}, EffectiveDate: {4}, Name: {5} was not found..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.InvalidSpecialRule">
+            <summary>
+              Looks up a localized string similar to Special Rule: &quot;{0}&quot; not found..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.InvalidTitleTransferCode">
+            <summary>
+              Looks up a localized string similar to The value &quot;{0}&quot; is not a valid Title Transfer Code..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.InvalidTransactionType">
+            <summary>
+              Looks up a localized string similar to The value &quot;{0}&quot; is not a valid Transaction Type..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.InvalidTransportationMode">
+            <summary>
+              Looks up a localized string similar to Mode Code &quot;{0}&quot; not found..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.InvalidUserDefinedError">
+            <summary>
+              Looks up a localized string similar to Could not find a determination error with error code {0} as specified by profile {1}..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.MissingCity">
+            <summary>
+              Looks up a localized string similar to No city was provided on the {0} for transaction line {1}..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.MissingCounty">
+            <summary>
+              Looks up a localized string similar to No county was provided on the {0} for transaction line {1}..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.MissingRuleSetConfiguration">
+            <summary>
+              Looks up a localized string similar to Company Settings entry for DET_RULESET not found..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.MissingSpecialJurisdictions">
+            <summary>
+              Looks up a localized string similar to Transaction Line specified {0} special jurisdictions should be used, but no special jurisdictions were found..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.MissingTransaction">
+            <summary>
+              Looks up a localized string similar to Transaction Missing..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.OverrideDestinationWithOrigin">
+            <summary>
+              Looks up a localized string similar to Populating Destination information using Origin information..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.OverrideOriginWithDestination">
+            <summary>
+              Looks up a localized string similar to Populating Origin information using Destination information..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.RuleSetTypeNotFound">
+            <summary>
+              Looks up a localized string similar to Invalid Configuration. Rule Definition for class &quot;{0}&quot; could not be found..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.ScenarioNotFound">
+            <summary>
+              Looks up a localized string similar to No Scenario record found.  TransactionType: {0} OriginJurisdiction: {1} OriginCountryCode: {2} DestinationJurisdiction: {3} DestinationCountryCode: {4} TitleTransferCode: {5} DeterminationProductCategory: {6} SellerId: {7} EffectiveDate: {8}.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.SellerNotFound">
+            <summary>
+              Looks up a localized string similar to Seller &quot;{0}&quot; does not exist or is not active for {1}..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.UnhandledTaxRule">
+            <summary>
+              Looks up a localized string similar to An unhandled exception occurred while processing the tax rules..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.UnitOfMeasureConversionNotFound">
+            <summary>
+              Looks up a localized string similar to Unit of Measure Conversion Not Found. The tax quantity is not provided in the needed unit of measure and cannot be converted to the needed unit of measure. From: {0}, To: {1}..
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.UnlicensedJurisdiction">
+            <summary>
+              Looks up a localized string similar to Not licensed to calculate taxes for Country: &quot;{0}&quot; Jurisdiction: &quot;{1}.
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.ErrorMessages.UserError">
+            <summary>
+              Looks up a localized string similar to User Error.  Profile ID: {0}.  {1}.
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.Filter.BusinessAccountFilter">
+            <summary>
+            Lookup Filter Class - BusinessAccountFilter
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.BusinessAccountFilter.#ctor">
+            <summary>
+            Default Constructor 
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.BusinessAccountFilter.#ctor(ZyTax.ZMS.Determination.Engine.Filter.BusinessAccountFilter)">
+            <summary>
+            Copy Constructor 
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.BusinessAccountFilter.#ctor(System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Int32},System.Nullable{ZyTax.ZMS.Common.Contracts.Types.BusinessType},System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.Nullable{ZyTax.ZMS.Common.Contracts.Indicators.ChangeCause})">
+            <summary>
+            Instance Constructor 
+            </summary>
+            <param name="businessAccountId">business_account_id as int</param>
+            <param name="countryCode">country_code as nchar(3)</param>
+            <param name="jurisdiction">jurisdiction as nvarchar(10)</param>
+            <param name="businessEntityId">business_entity_id as int</param>
+            <param name="businessType">business_type as nvarchar(10)</param>
+            <param name="businessSubType">business_sub_type as nvarchar(20)</param>
+            <param name="customId">custom_id as nvarchar(25)</param>
+            <param name="effectiveDate">effective_date as datetime</param>
+            <param name="obsoleteDate">obsolete_date as datetime</param>
+            <param name="licenseNumber">license_number as nvarchar(20)</param>
+            <param name="changeInd">change_ind as nchar(1)</param>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessAccountFilter.BusinessAccountId">
+            <summary>
+            Maps to business_account_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessAccountFilter.CountryCode">
+            <summary>
+            Maps to country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessAccountFilter.Jurisdiction">
+            <summary>
+            Maps to jurisdiction as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessAccountFilter.BusinessEntityId">
+            <summary>
+            Maps to business_entity_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessAccountFilter.BusinessType">
+            <summary>
+            Maps to business_type as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessAccountFilter.BusinessSubType">
+            <summary>
+            Maps to business_sub_type as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessAccountFilter.CustomId">
+            <summary>
+            Maps to custom_id as nvarchar(25)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessAccountFilter.EffectiveDate">
+            <summary>
+            Maps to effective_date as datetime
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessAccountFilter.ObsoleteDate">
+            <summary>
+            Maps to obsolete_date as datetime
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessAccountFilter.LicenseNumber">
+            <summary>
+            Maps to license_number as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessAccountFilter.ChangeInd">
+            <summary>
+            Maps to change_ind as nchar(1)
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter">
+            <summary>
+            Lookup Filter Class - BusinessEntityFilter
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.#ctor">
+            <summary>
+            Default Constructor 
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.#ctor(ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter)">
+            <summary>
+            Copy Constructor 
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{ZyTax.ZMS.Common.Contracts.Types.BusinessEntityIdType},System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{ZyTax.ZMS.Common.Contracts.Indicators.ChangeCause})">
+            <summary>
+            Instance Constructor 
+            </summary>
+            <param name="businessEntityId">business_entity_id as int</param>
+            <param name="companyId">company_id as int</param>
+            <param name="idType">id_type as nvarchar(10)</param>
+            <param name="idCode">id_code as nvarchar(20)</param>
+            <param name="customId">custom_id as nvarchar(35)</param>
+            <param name="effectiveDate">effective_date as datetime</param>
+            <param name="obsoleteDate">obsolete_date as datetime</param>
+            <param name="tradeName">trade_name as nvarchar(100)</param>
+            <param name="legalName">legal_name as nvarchar(100)</param>
+            <param name="nameControl">name_control as nchar(4)</param>
+            <param name="address1">address_1 as nvarchar(35)</param>
+            <param name="address2">address_2 as nvarchar(35)</param>
+            <param name="city">city as nvarchar(30)</param>
+            <param name="jurisdiction">jurisdiction as nvarchar(10)</param>
+            <param name="postalCode">postal_code as nvarchar(11)</param>
+            <param name="countryCode">country_code as nchar(3)</param>
+            <param name="county">county as nvarchar(30)</param>
+            <param name="countyCode">county_code as nvarchar(10)</param>
+            <param name="alternateJurisdiction">alternate_jurisdiction as nvarchar(30)</param>
+            <param name="changeInd">change_ind as nchar(1)</param>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.BusinessEntityId">
+            <summary>
+            Maps to business_entity_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.IdType">
+            <summary>
+            Maps to id_type as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.IdCode">
+            <summary>
+            Maps to id_code as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.CustomId">
+            <summary>
+            Maps to custom_id as nvarchar(35)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.EffectiveDate">
+            <summary>
+            Maps to effective_date as datetime
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.ObsoleteDate">
+            <summary>
+            Maps to obsolete_date as datetime
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.TradeName">
+            <summary>
+            Maps to trade_name as nvarchar(100)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.LegalName">
+            <summary>
+            Maps to legal_name as nvarchar(100)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.NameControl">
+            <summary>
+            Maps to name_control as nchar(4)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.Address1">
+            <summary>
+            Maps to address_1 as nvarchar(35)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.Address2">
+            <summary>
+            Maps to address_2 as nvarchar(35)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.City">
+            <summary>
+            Maps to city as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.Jurisdiction">
+            <summary>
+            Maps to jurisdiction as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.PostalCode">
+            <summary>
+            Maps to postal_code as nvarchar(11)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.CountryCode">
+            <summary>
+            Maps to country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.County">
+            <summary>
+            Maps to county as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.CountyCode">
+            <summary>
+            Maps to county_code as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.AlternateJurisdiction">
+            <summary>
+            Maps to alternate_jurisdiction as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityFilter.ChangeInd">
+            <summary>
+            Maps to change_ind as nchar(1)
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter">
+            <summary>
+            Lookup Filter Class - BusinessProfileFilter
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.#ctor">
+            <summary>
+            Default Constructor 
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.#ctor(ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter)">
+            <summary>
+            Copy Constructor 
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.#ctor(System.Int32,System.Int32,System.DateTime,System.Nullable{System.DateTime},System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Decimal},System.String,System.String,System.String,System.Nullable{System.Decimal},System.String,System.String,System.Nullable{System.Decimal},System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{ZyTax.ZMS.Common.Contracts.Types.LocalTaxLocationType},System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Instance Constructor 
+            </summary>
+            <param name="profileId">profile_id as int</param>
+            <param name="profileGroupId">profile_group_id as int</param>
+            <param name="effectiveDate">effective_date as datetime</param>
+            <param name="obsoleteDate">obsolete_date as datetime</param>
+            <param name="profileTypeCode">profile_type_code as nvarchar(10)</param>
+            <param name="taxCountryCode">tax_country_code as nvarchar(3)</param>
+            <param name="taxJurisdiction">tax_jurisdiction as nvarchar(10)</param>
+            <param name="taxingLevel">taxing_level as nvarchar(20)</param>
+            <param name="taxType">tax_type as nvarchar(30)</param>
+            <param name="rateType">rate_type as nvarchar(30)</param>
+            <param name="rateSubtype">rate_subtype as nvarchar(30)</param>
+            <param name="productCategory">product_category as decimal(2,0)</param>
+            <param name="overrideValue">override_value as nvarchar(50)</param>
+            <param name="description">description as nvarchar(100)</param>
+            <param name="productCode">product_code as nvarchar(10)</param>
+            <param name="determinationProductCategory">determination_product_category as decimal(2,0)</param>
+            <param name="alternateProductCode">alternate_product_code as nvarchar(10)</param>
+            <param name="blendToProductCode">blend_to_product_code as nvarchar(10)</param>
+            <param name="blendToProductCategory">blend_to_product_category as decimal(2,0)</param>
+            <param name="fuelUseCode">fuel_use_code as nvarchar(3)</param>
+            <param name="transportationModeCode">transportation_mode_code as nvarchar(3)</param>
+            <param name="transactionType">transaction_type as nvarchar(20)</param>
+            <param name="titleTransferCode">title_transfer_code as nvarchar(4)</param>
+            <param name="sellerId">seller_id as int</param>
+            <param name="originCountryCode">origin_country_code as nvarchar(3)</param>
+            <param name="originJurisdiction">origin_jurisdiction as nvarchar(50)</param>
+            <param name="originCity">origin_city as nvarchar(30)</param>
+            <param name="originCounty">origin_county as nvarchar(30)</param>
+            <param name="originOutCityLimitInd">origin_out_city_limit_ind as nchar(1)</param>
+            <param name="originTypeCode">origin_type_code as nvarchar(10)</param>
+            <param name="originCustomId">origin_custom_id as nvarchar(25)</param>
+            <param name="destinationCountryCode">destination_country_code as nvarchar(3)</param>
+            <param name="destinationJurisdiction">destination_jurisdiction as nvarchar(10)</param>
+            <param name="destinationCity">destination_city as nvarchar(30)</param>
+            <param name="destinationCounty">destination_county as nvarchar(30)</param>
+            <param name="destinationOutCityLimitInd">destination_out_city_limit_ind as nchar(1)</param>
+            <param name="destinationTypeCode">destination_type_code as nvarchar(10)</param>
+            <param name="destinationCustomId">destination_custom_id as nvarchar(25)</param>
+            <param name="blendToInd">blend_to_ind as nchar(1)</param>
+            <param name="blendToAltProductCode">blend_to_alt_product_code as nvarchar(10)</param>
+            <param name="alternateTransportationMode">alternate_transportation_mode as nvarchar(24)</param>
+            <param name="saleCountryCode">sale_country_code as nvarchar(3)</param>
+            <param name="saleJurisdiction">sale_jurisdiction as nvarchar(10)</param>
+            <param name="saleCity">sale_city as nvarchar(30)</param>
+            <param name="saleCounty">sale_county as nvarchar(30)</param>
+            <param name="saleOutCityLimitInd">sale_out_city_limit_ind as nchar(1)</param>
+            <param name="saleTypeCode">sale_type_code as nvarchar(10)</param>
+            <param name="saleCustomId">sale_custom_id as nvarchar(25)</param>
+            <param name="freightType">freight_type as nvarchar(30)</param>
+            <param name="localTaxLocationCode">local_tax_location_code as nvarchar(4)</param>
+            <param name="specialJurisdictionInd">special_jurisdiction_ind as nchar(1)</param>
+            <param name="specialJurisdictionType">special_jurisdiction_type as nvarchar(20)</param>
+            <param name="specialJurisdictionCode">special_jurisdiction_code as nvarchar(30)</param>
+            <param name="nextBuyerId">next_buyer_id as int</param>
+            <param name="previousSellerId">previous_seller_id as int</param>
+            <param name="sellerVatCountryCode">seller_vat_country_code as nvarchar(20)</param>
+            <param name="sellerVatNumber">seller_vat_number as nvarchar(20)</param>
+            <param name="buyerVatCountryCode">buyer_vat_country_code as nvarchar(20)</param>
+            <param name="buyerVatNumber">buyer_vat_number as nvarchar(20)</param>
+            <param name="customsStatus">customs_status as nvarchar(30)</param>
+            <param name="formAPresentedInd">form_a_presented_ind as nchar(1)</param>
+            <param name="simplifiedProcedureInd">simplified_procedure_ind as nchar(1)</param>
+            <param name="incoterms">incoterms as nvarchar(3)</param>
+            <param name="originExciseWarehouse">origin_excise_warehouse as nvarchar(20)</param>
+            <param name="destinationExciseWarehouse">destination_excise_warehouse as nvarchar(20)</param>
+            <param name="saleExciseWarehouse">sale_excise_warehouse as nvarchar(20)</param>
+            <param name="transactionUserData">transaction_user_data as nvarchar(20)</param>
+            <param name="transactionLineUserData">transaction_line_user_data as nvarchar(20)</param>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.ProfileId">
+            <summary>
+            Maps to profile_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.ProfileGroupId">
+            <summary>
+            Maps to profile_group_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.EffectiveDate">
+            <summary>
+            Maps to effective_date as datetime
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.ObsoleteDate">
+            <summary>
+            Maps to obsolete_date as datetime
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.ProfileTypeCode">
+            <summary>
+            Maps to profile_type_code as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.ScenarioTaxGroupId">
+            <summary>
+            Maps to seller_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.TaxCountryCode">
+            <summary>
+            Maps to tax_country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.TaxJurisdiction">
+            <summary>
+            Maps to tax_jurisdiction as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.TaxingLevel">
+            <summary>
+            Maps to taxing_level as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.TaxType">
+            <summary>
+            Maps to tax_type as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.RateType">
+            <summary>
+            Maps to rate_type as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.RateSubtype">
+            <summary>
+            Maps to rate_subtype as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.ProductCategory">
+            <summary>
+            Maps to product_category as decimal(2,0)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.OverrideValue">
+            <summary>
+            Maps to override_value as nvarchar(50)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.Description">
+            <summary>
+            Maps to description as nvarchar(100)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.ProductCode">
+            <summary>
+            Maps to product_code as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.DeterminationProductCategory">
+            <summary>
+            Maps to determination_product_category as decimal(2,0)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.AlternateProductCode">
+            <summary>
+            Maps to alternate_product_code as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.AlternateTransportationMode">
+            <summary>
+            Maps to alternate_transportation_mode as nvarchar(24)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.BlendToProductCode">
+            <summary>
+            Maps to blend_to_product_code as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.BlendToProductCategory">
+            <summary>
+            Maps to blend_to_product_category as decimal(2,0)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.BlendToAltProductCode">
+            <summary>
+            Maps to blend_to_alt_product_code as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.FuelUseCode">
+            <summary>
+            Maps to fuel_use_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.TransportationModeCode">
+            <summary>
+            Maps to transportation_mode_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.TransactionType">
+            <summary>
+            Maps to transaction_type as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.TitleTransferCode">
+            <summary>
+            Maps to title_transfer_code as nvarchar(4)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.BuyerId">
+            <summary>
+            Maps to seller_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.SellerId">
+            <summary>
+            Maps to seller_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.OriginCountryCode">
+            <summary>
+            Maps to origin_country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.OriginJurisdiction">
+            <summary>
+            Maps to origin_jurisdiction as nvarchar(50)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.OriginCity">
+            <summary>
+            Maps to origin_city as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.OriginCounty">
+            <summary>
+            Maps to origin_county as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.OriginOutCityLimitInd">
+            <summary>
+            Maps to origin_out_city_limit_ind as nchar(1)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.OriginPostalCode">
+            <summary>
+            Maps to origin_Postal_code as nchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.OriginTypeCode">
+            <summary>
+            Maps to origin_type_code as nchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.OriginCustomId">
+            <summary>
+            Maps to origin_custom_id as nvarchar(25)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.DestinationCountryCode">
+            <summary>
+            Maps to destination_country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.DestinationJurisdiction">
+            <summary>
+            Maps to destination_jurisdiction as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.DestinationCity">
+            <summary>
+            Maps to destination_city as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.DestinationCounty">
+            <summary>
+            Maps to destination_county as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.DestinationOutCityLimitInd">
+            <summary>
+            Maps to destination_out_city_limit_ind as nchar(1)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.DestinationPostalCode">
+            <summary>
+            Maps to destination_Postal_code as nchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.DestinationTypeCode">
+            <summary>
+            Maps to destination_type_code as nchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.DestinationCustomId">
+            <summary>
+            Maps to destination_custom_id as nvarchar(25)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.SaleCountryCode">
+            <summary>
+            Maps to Sale_country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.SaleJurisdiction">
+            <summary>
+            Maps to Sale_jurisdiction as nvarchar(50)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.SaleCity">
+            <summary>
+            Maps to Sale_city as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.SaleCounty">
+            <summary>
+            Maps to Sale_county as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.SaleOutCityLimitInd">
+            <summary>
+            Maps to Sale_out_city_limit_ind as nchar(1)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.SalePostalCode">
+            <summary>
+            Maps to Sale_Postal_code as nchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.SaleTypeCode">
+            <summary>
+            Maps to Sale_type_code as nchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.SaleCustomId">
+            <summary>
+            Maps to Sale_custom_id as nvarchar(25)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.AlternativeFuelContent">
+            <summary>
+            Maps to alternative_fuel_content as decimal(9,5)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.BlendToAltFuelContent">
+            <summary>
+            Maps to blend_to_alt_fuel_content as decimal(9,5)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.BlendToInd">
+            <summary>
+            Maps to blend_to_ind as nchar(1)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.FreightType">
+            <summary>
+            Maps to freight_type as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.LocalTaxLocationCode">
+            <summary>
+            Maps to local_tax_location_code as nvarchar(4)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.SpecialJurisdictionInd">
+            <summary>
+            Maps to special_jurisdiction_ind as nchar(1)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.SpecialJurisdictionType">
+            <summary>
+            Maps to special_jurisdiction_type as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.SpecialJurisdictionCode">
+            <summary>
+            Maps to special_jurisdiction_code as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.PreviousSellerId">
+            <summary>
+            Maps to previous_seller_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.NextBuyerId">
+            <summary>
+            Maps to next_buyer_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.SellerVatCountryCode">
+            <summary>
+            Maps to seller_vat_number as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.SellerVatNumber">
+            <summary>
+            Maps to seller_vat_number as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.BuyerVatCountryCode">
+            <summary>
+            Maps to buyer_vat_number as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.BuyerVatNumber">
+            <summary>
+            Maps to buyer_vat_number as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.CustomsStatus">
+            <summary>
+            Maps to customs_status as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.FormAPresentedInd">
+            <summary>
+            Maps to form_a_presented_ind as nchar(1)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.SimplifiedProcedureInd">
+            <summary>
+            Maps to simplified_procedure_ind as nchar(1)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.Incoterms">
+            <summary>
+            Maps to incoterms as nvarchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.OriginExciseWarehouse">
+            <summary>
+            Maps to origin_excise_warehouse as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.DestinationExciseWarehouse">
+            <summary>
+            Maps to destination_excise_warehouse as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.SaleExciseWarehouse">
+            <summary>
+            Maps to sale_excise_warehouse as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.TransactionUserData">
+            <summary>
+            Maps to transaction_user_data as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessProfileFilter.TransactionLineUserData">
+            <summary>
+            Maps to transaction_line_user_data as nvarchar(20)
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.Filter.CommonCodesFilter">
+            <summary>
+            Data Contract Class - CommonCodes
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.CommonCodesFilter.#ctor">
+            <summary>
+            Default Constructor 
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.CommonCodesFilter.#ctor(ZyTax.ZMS.Determination.Engine.Filter.CommonCodesFilter)">
+            <summary>
+            Copy Constructor 
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.CommonCodesFilter.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Instance Constructor 
+            </summary>
+            <param name="countryCode">country_code as nchar(3)</param>
+            <param name="jurisdiction">jurisdiction as nvarchar(10)</param>
+            <param name="codeType">code_type as nvarchar(20)</param>
+            <param name="commonCode">common_code as nvarchar(20)</param>
+            <param name="customCode">custom_code as nvarchar(255)</param>
+            <param name="description">description as nvarchar(256)</param>       
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.CommonCodesFilter.CountryCode">
+            <summary>
+            Maps to country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.CommonCodesFilter.Jurisdiction">
+            <summary>
+            Maps to jurisdiction as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.CommonCodesFilter.CommonCode">
+            <summary>
+            Maps to local_jurisdiction_type as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.CommonCodesFilter.CodeType">
+            <summary>
+            Maps to local_jurisdiction_type as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.CommonCodesFilter.CustomCode">
+            <summary>
+            Maps to local_jurisdiction_type as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.CommonCodesFilter.Description">
+            <summary>
+            Maps to local_jurisdiction_type as nvarchar(20)
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityAlternateFilter">
+            <summary>
+            Data Contract Class - CommonCodes
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityAlternateFilter.#ctor">
+            <summary>
+            Default Constructor 
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityAlternateFilter.#ctor(ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityAlternateFilter)">
+            <summary>
+            Copy Constructor 
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityAlternateFilter.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Instance Constructor 
+            </summary>
+            <param name="childBusinessEntityId">child_location_id as int</param>
+            <param name="parentBusinessEntityId">parent_location_id as int</param>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityAlternateFilter.ChildBusinessEntityId">
+            <summary>
+            Maps to child_location_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.BusinessEntityAlternateFilter.ParentBusinessEntityId">
+            <summary>
+            Maps to parent_location_id as int
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.Filter.LocationAlternateFilter">
+            <summary>
+            Data Contract Class - CommonCodes
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.LocationAlternateFilter.#ctor">
+            <summary>
+            Default Constructor 
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.LocationAlternateFilter.#ctor(ZyTax.ZMS.Determination.Engine.Filter.LocationAlternateFilter)">
+            <summary>
+            Copy Constructor 
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.LocationAlternateFilter.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Instance Constructor 
+            </summary>
+            <param name="childLocationId">child_location_id as int</param>
+            <param name="parentLocationId">parent_location_id as int</param>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationAlternateFilter.ChildLocationId">
+            <summary>
+            Maps to child_location_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationAlternateFilter.ParentLocationId">
+            <summary>
+            Maps to parent_location_id as int
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionXrefFilter">
+            <summary>
+            Filter
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionXrefFilter.CountryCode">
+            <summary>
+            Maps to country_code as nvarchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionXrefFilter.Jurisdiction">
+            <summary>
+            Maps to jurisdiction as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionXrefFilter.ParentLocalJurisdictionCode">
+            <summary>
+            Maps to parent_local_jurisdiction_code as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionXrefFilter.ParentLocalJurisdictionType">
+            <summary>
+            Maps to parent_local_jurisdiction_type as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionXrefFilter.ChildLocalJurisdictionCode">
+            <summary>
+            Maps to child_local_jurisdiction_code as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionXrefFilter.ChildLocalJurisdictionType">
+            <summary>
+            Maps to child_local_jurisdiction_type as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionXrefFilter.EffectiveDate">
+            <summary>
+            Maps to effective_date as datetime
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionXrefFilter.ObsoleteDate">
+            <summary>
+            Maps to obsolete_date as datetime
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionFilter">
+            <summary>
+            Data Contract Class - LocalJurisdiction
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionFilter.#ctor">
+            <summary>
+            Default Constructor 
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionFilter.#ctor(ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionFilter)">
+            <summary>
+            Copy Constructor 
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionFilter.#ctor(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.Nullable{ZyTax.ZMS.Common.Contracts.Indicators.YesNo})">
+            <summary>
+            Instance Constructor 
+            </summary>
+            <param name="countryCode">country_code as nchar(3)</param>
+            <param name="jurisdiction">jurisdiction as nvarchar(10)</param>
+            <param name="localJurisdictionCode">local_jurisdiction_code as nvarchar(30)</param>
+            <param name="localJurisdictionType">local_jurisdiction_type as nvarchar(20)</param>
+            <param name="effectiveDate">effective_date as datetime</param>
+            <param name="obsoleteDate">obsolete_date as datetime</param>
+            <param name="name">name as nvarchar(30)</param>
+            <param name="specialJurisdictionInd"></param>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionFilter.CountryCode">
+            <summary>
+            Maps to country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionFilter.Jurisdiction">
+            <summary>
+            Maps to jurisdiction as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionFilter.LocalJurisdictionCode">
+            <summary>
+            Maps to local_jurisdiction_code as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionFilter.LocalJurisdictionType">
+            <summary>
+            Maps to local_jurisdiction_type as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionFilter.EffectiveDate">
+            <summary>
+            Maps to effective_date as datetime
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionFilter.ObsoleteDate">
+            <summary>
+            Maps to obsolete_date as datetime
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionFilter.Name">
+            <summary>
+            Maps to name as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionFilter.Description">
+            <summary>
+            Maps to description as nvarchar(250)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocalJurisdictionFilter.SpecialJurisdictionInd">
+            <summary>
+            Maps to special_jurisdiction_ind as nchar(1)
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.Filter.AlternateLocalJurisdictionFilter">
+            <summary>
+            Data Contract Class - CommonCodes
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.AlternateLocalJurisdictionFilter.#ctor">
+            <summary>
+            Default Constructor 
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.AlternateLocalJurisdictionFilter.#ctor(ZyTax.ZMS.Determination.Engine.Filter.AlternateLocalJurisdictionFilter)">
+            <summary>
+            Copy Constructor 
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.AlternateLocalJurisdictionFilter.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Instance Constructor 
+            </summary>
+            <param name="originCountryCode">origin_country_code as nchar(3)</param>
+            <param name="originJurisdiction">origin_jurisdiction as nvarchar(50)</param>
+            <param name="originCity">origin_city as nvarchar(30)</param>
+            <param name="originCounty">origin_county as nvarchar(30)</param>
+            <param name="destinationCountryCode">destination_country_code as nchar(3)</param>
+            <param name="destinationJurisdiction">destination_jurisdiction as nvarchar(10)</param>
+            <param name="destinationCity">destination_city as nvarchar(30)</param>
+            <param name="destinationCounty">destination_county as nvarchar(30)</param>
+            <param name="saleCountryCode">sale_country_code as nchar(3)</param>
+            <param name="saleJurisdiction">sale_jurisdiction as nvarchar(50)</param>
+            <param name="saleCity">sale_city as nvarchar(30)</param>
+            <param name="saleCounty">sale_county as nvarchar(30)</param>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.AlternateLocalJurisdictionFilter.OriginCountryCode">
+            <summary>
+            Maps to origin_country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.AlternateLocalJurisdictionFilter.OriginJurisdiction">
+            <summary>
+            Maps to origin_jurisdiction as nvarchar(50)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.AlternateLocalJurisdictionFilter.OriginCity">
+            <summary>
+            Maps to origin_city as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.AlternateLocalJurisdictionFilter.OriginCounty">
+            <summary>
+            Maps to origin_county as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.AlternateLocalJurisdictionFilter.DestinationCountryCode">
+            <summary>
+            Maps to destination_country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.AlternateLocalJurisdictionFilter.DestinationJurisdiction">
+            <summary>
+            Maps to destination_jurisdiction as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.AlternateLocalJurisdictionFilter.DestinationCity">
+            <summary>
+            Maps to destination_city as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.AlternateLocalJurisdictionFilter.DestinationCounty">
+            <summary>
+            Maps to destination_county as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.AlternateLocalJurisdictionFilter.SaleCountryCode">
+            <summary>
+            Maps to Sale_country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.AlternateLocalJurisdictionFilter.SaleJurisdiction">
+            <summary>
+            Maps to Sale_jurisdiction as nvarchar(50)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.AlternateLocalJurisdictionFilter.SaleCity">
+            <summary>
+            Maps to Sale_city as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.AlternateLocalJurisdictionFilter.SaleCounty">
+            <summary>
+            Maps to Sale_county as nvarchar(30)
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter">
+            <summary>
+            Lookup Filter Class - LocationFilter
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.#ctor">
+            <summary>
+            Default Constructor 
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.#ctor(ZyTax.ZMS.Determination.Engine.Filter.LocationFilter)">
+            <summary>
+            Copy Constructor 
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{ZyTax.ZMS.Common.Contracts.Indicators.ChangeCause})">
+            <summary>
+            Instance Constructor 
+            </summary>
+            <param name="locationId">location_id as int</param>
+            <param name="masterCompanyId">master_company_id as int</param>
+            <param name="effectiveDate">effective_date as datetime</param>
+            <param name="obsoleteDate">obsolete_date as datetime</param>
+            <param name="terminalCode">terminal_code as nvarchar(20)</param>
+            <param name="customId">custom_id as nvarchar(25)</param>
+            <param name="description">description as nvarchar(256)</param>
+            <param name="splc">splc as nvarchar(10)</param>
+            <param name="address1">address_1 as nvarchar(35)</param>
+            <param name="address2">address_2 as nvarchar(35)</param>
+            <param name="city">city as nvarchar(30)</param>
+            <param name="jurisdiction">jurisdiction as nvarchar(10)</param>
+            <param name="postalCode">postal_code as nvarchar(11)</param>
+            <param name="countryCode">country_code as nchar(3)</param>
+            <param name="county">county as nvarchar(30)</param>
+            <param name="countyCode">county_code as nvarchar(10)</param>
+            <param name="alternateJurisdiction">alternate_jurisdiction as nvarchar(30)</param>
+            <param name="depNumber">dep_number as nvarchar(20)</param>
+            <param name="changeInd">change_ind as nchar(1)</param>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.LocationId">
+            <summary>
+            Maps to location_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.EffectiveDate">
+            <summary>
+            Maps to effective_date as datetime
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.ObsoleteDate">
+            <summary>
+            Maps to obsolete_date as datetime
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.TerminalCode">
+            <summary>
+            Maps to terminal_code as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.CustomId">
+            <summary>
+            Maps to custom_id as nvarchar(25)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.Description">
+            <summary>
+            Maps to description as nvarchar(256)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.Splc">
+            <summary>
+            Maps to splc as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.Address1">
+            <summary>
+            Maps to address_1 as nvarchar(35)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.Address2">
+            <summary>
+            Maps to address_2 as nvarchar(35)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.City">
+            <summary>
+            Maps to city as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.Jurisdiction">
+            <summary>
+            Maps to jurisdiction as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.PostalCode">
+            <summary>
+            Maps to postal_code as nvarchar(11)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.CountryCode">
+            <summary>
+            Maps to country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.County">
+            <summary>
+            Maps to county as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.CountyCode">
+            <summary>
+            Maps to county_code as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.AlternateJurisdiction">
+            <summary>
+            Maps to alternate_jurisdiction as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.DepNumber">
+            <summary>
+            Maps to dep_number as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.ChangeInd">
+            <summary>
+            Maps to change_ind as nchar(1)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.LocationType">
+            <summary>
+            Maps to location_type as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.OutsideCityLimitInd">
+            <summary>
+            Maps to outside_city_limit_ind as nchar(1)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.LocationFilter.WarehouseNumber">
+            <summary>
+            Maps to warehouse_number as nvarchar(20)
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.Filter.RateFilter">
+            <summary>
+            Data Contract Class - Rate
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.#ctor">
+            <summary>
+            Default Constructor 
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.#ctor(ZyTax.ZMS.Determination.Engine.Filter.RateFilter)">
+            <summary>
+            Copy Constructor 
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.#ctor(System.String,System.String,System.String,System.Nullable{System.Int32},System.Decimal,System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Decimal},System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.String,System.String,System.String)">
+            <summary>
+            Instance Constructor 
+            </summary>
+            <param name="countryCode">country_code as nchar(3)</param>
+            <param name="jurisdiction">jurisdiction as nvarchar(10)</param>
+            <param name="localJurisdiction">local_jurisdiction as nvarchar(30)</param>
+            <param name="masterCompanyId">master_company_id as int</param>
+            <param name="productCategory">product_category as decimal(2,0)</param>
+            <param name="taxingLevel">taxing_level as nvarchar(20)</param>
+            <param name="taxType">tax_type as nvarchar(30)</param>
+            <param name="rateType">rate_type as nvarchar(30)</param>
+            <param name="rateSubtype">rate_subtype as nvarchar(30)</param>
+            <param name="effectiveDate">effective_date as datetime</param>
+            <param name="obsoleteDate">obsolete_date as datetime</param>
+            <param name="taxRate">tax_rate as decimal(15,10)</param>
+            <param name="calculationTypeInd">calculation_type_ind as nchar(1)</param>
+            <param name="maximumUnits">maximum_units as decimal(9,0)</param>
+            <param name="maximumCurrencyAmount">maximum_currency_amount as decimal(11,2)</param>
+            <param name="minimumUnits">minimum_units as decimal(9,0)</param>
+            <param name="minimumCurrencyAmount">minimum_currency_amount as decimal(11,2)</param>
+            <param name="description">description as nvarchar(256)</param>
+            <param name="unitOfMeasure">unit_of_measure as nvarchar(10)</param>
+            <param name="currency">currency as nvarchar(10)</param>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.CountryCode">
+            <summary>
+            Maps to country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.Jurisdiction">
+            <summary>
+            Maps to jurisdiction as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.LocalJurisdiction">
+            <summary>
+            Maps to local_jurisdiction as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.ProductCategory">
+            <summary>
+            Maps to product_category as decimal(2,0)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.TaxingLevel">
+            <summary>
+            Maps to taxing_level as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.TaxType">
+            <summary>
+            Maps to tax_type as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.RateType">
+            <summary>
+            Maps to rate_type as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.RateSubtype">
+            <summary>
+            Maps to rate_subtype as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.EffectiveDate">
+            <summary>
+            Maps to effective_date as datetime
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.ObsoleteDate">
+            <summary>
+            Maps to obsolete_date as datetime
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.TaxRate">
+            <summary>
+            Maps to tax_rate as decimal(15,10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.CalculationTypeInd">
+            <summary>
+            Maps to calculation_type_ind as nchar(1)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.MaximumUnits">
+            <summary>
+            Maps to maximum_units as decimal(9,0)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.MaximumCurrencyAmount">
+            <summary>
+            Maps to maximum_currency_amount as decimal(11,2)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.MinimumUnits">
+            <summary>
+            Maps to minimum_units as decimal(9,0)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.MinimumCurrencyAmount">
+            <summary>
+            Maps to minimum_currency_amount as decimal(11,2)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.Description">
+            <summary>
+            Maps to description as nvarchar(256)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.UnitOfMeasure">
+            <summary>
+            Maps to unit_of_measure as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.RateFilter.Currency">
+            <summary>
+            Maps to currency as nvarchar(10)
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.Filter.ScenarioFilter">
+            <summary>
+            Lookup Filter Class - ScenarioFilter
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioFilter.#ctor">
+            <summary>
+            Default Constructor 
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioFilter.#ctor(ZyTax.ZMS.Determination.Engine.Filter.ScenarioFilter)">
+            <summary>
+            Copy Constructor 
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioFilter.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Decimal},System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            Instance Constructor 
+            </summary>
+            <param name="companyId">company_id as int</param>
+            <param name="sellerId">seller_id as int</param>
+            <param name="transactionType">transaction_type as nvarchar(20)</param>
+            <param name="originCountryCode">origin_country_code as nchar(3)</param>
+            <param name="originJurisdiction">origin_jurisdiction as nvarchar(10)</param>
+            <param name="destinationCountryCode">destination_country_code as nchar(3)</param>
+            <param name="destinationJurisdiction">destination_jurisdiction as nvarchar(10)</param>
+            <param name="titleTransferCode">title_transfer_code as varchar(10)</param>
+            <param name="determinationProductCategory">determination_product_category as decimal(2,0)</param>
+            <param name="effectiveDate">effective_date as datetime</param>
+            <param name="obsoleteDate">obsolete_date as datetime</param>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioFilter.SellerId">
+            <summary>
+            Maps to seller_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioFilter.TransactionType">
+            <summary>
+            Maps to transaction_type as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioFilter.OriginCountryCode">
+            <summary>
+            Maps to origin_country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioFilter.OriginJurisdiction">
+            <summary>
+            Maps to origin_jurisdiction as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioFilter.DestinationCountryCode">
+            <summary>
+            Maps to destination_country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioFilter.DestinationJurisdiction">
+            <summary>
+            Maps to destination_jurisdiction as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioFilter.TitleTransferCode">
+            <summary>
+            Maps to title_transfer_code as varchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioFilter.DeterminationProductCategory">
+            <summary>
+            Maps to determination_product_category as decimal(2,0)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioFilter.EffectiveDate">
+            <summary>
+            Maps to effective_date as datetime
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioFilter.ObsoleteDate">
+            <summary>
+            Maps to obsolete_date as datetime
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.Filter.ScenarioRateFilter">
+            <summary>
+            Data Contract Class - Rate
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioRateFilter.#ctor">
+            <summary>
+            Default Constructor 
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioRateFilter.#ctor(ZyTax.ZMS.Determination.Engine.Filter.ScenarioRateFilter)">
+            <summary>
+            Copy Constructor 
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioRateFilter.#ctor(System.Nullable{System.Int32},System.Nullable{System.DateTime},System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Instance Contrustor
+            </summary>
+            <param name="scenarioId"></param>
+            <param name="effectiveDate"></param>
+            <param name="originCounty"></param>
+            <param name="originCity"></param>
+            <param name="destinationCounty"></param>
+            <param name="destinationCity"></param>
+            <param name="saleCity"></param>
+            <param name="saleCounty"></param>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioRateFilter.ScenarioId">
+            <summary>
+            Maps to scenario_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioRateFilter.EffectiveDate">
+            <summary>
+            Maps to effective_date as datetime
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioRateFilter.OriginCity">
+            <summary>
+            Maps to origin_city as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioRateFilter.OriginCounty">
+            <summary>
+            Maps to origin_county as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioRateFilter.DestinationCity">
+            <summary>
+            Maps to destination_city as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioRateFilter.DestinationCounty">
+            <summary>
+            Maps to destination_county as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioRateFilter.SaleCity">
+            <summary>
+            Maps to Sale_city as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioRateFilter.SaleCounty">
+            <summary>
+            Maps to Sale_county as nvarchar(30)
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxCurrencyFilter">
+            <summary>
+            Lookup Filter Class - ScenarioTaxCurrencyFilter
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxCurrencyFilter.#ctor">
+            <summary>
+            Default Constructor 
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxCurrencyFilter.#ctor(ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxCurrencyFilter)">
+            <summary>
+            Copy Constructor 
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxCurrencyFilter.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Nullable{ZyTax.ZMS.Common.Contracts.Types.EffectiveDateType})">
+            <summary>
+            Instance Constructor 
+            </summary>
+            <param name="scenarioId">scenario_id as int</param>
+            <param name="scenarioSequence">scenario_sequence as int</param>
+            <param name="currency">currency as nvarchar(10)</param>
+            <param name="effectiveDateType">effective_date_type as nvarchar(3)</param>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxCurrencyFilter.ScenarioId">
+            <summary>
+            Maps to scenario_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxCurrencyFilter.ScenarioTaxGroupId">
+            <summary>
+            Maps to scenario_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxCurrencyFilter.ScenarioSequence">
+            <summary>
+            Maps to scenario_sequence as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxCurrencyFilter.Currency">
+            <summary>
+            Maps to currency as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxCurrencyFilter.EffectiveDateType">
+            <summary>
+            Maps to effective_date as datetime
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxCurrencyFilter.CurrencyRoundingType">
+            <summary>
+            Maps to currency_rounding_type as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxCurrencyFilter.CurrencyRoundingPlaces">
+            <summary>
+            Maps to currency_rounding_places as smallint
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter">
+            <summary>
+            Lookup Filter Class - ScenarioTaxFilter
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.#ctor">
+            <summary>
+            Default Constructor 
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.#ctor(ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter)">
+            <summary>
+            Copy Constructor 
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int16},System.Nullable{ZyTax.ZMS.Common.Contracts.Indicators.YesNo},System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Decimal},System.Nullable{ZyTax.ZMS.Common.Contracts.Indicators.BilledNetGross},System.Nullable{ZyTax.ZMS.Common.Contracts.Types.LocalTaxLocationType},System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{ZyTax.ZMS.Common.Contracts.Indicators.YesNo})">
+            <summary>
+            Instance Constructor 
+            </summary>
+            <param name="scenarioId">scenario_id as int</param>
+            <param name="scenarioSequence">scenario_sequence as int</param>
+            <param name="calculationOrder">calculation_order as smallint</param>
+            <param name="exceptionInd">exception_ind as nchar(1)</param>
+            <param name="countryCode">country_code as nchar(3)</param>
+            <param name="jurisdiction">jurisdiction as nvarchar(10)</param>
+            <param name="taxingLevel">taxing_level as nvarchar(20)</param>
+            <param name="taxType">tax_type as nvarchar(30)</param>
+            <param name="rateType">rate_type as nvarchar(30)</param>
+            <param name="rateSubtype">rate_subtype as nvarchar(30)</param>
+            <param name="productCategory">product_category as decimal(2,0)</param>
+            <param name="quantityInd">quantity_ind as nchar(1)</param>
+            <param name="localTaxLocationCode">local_tax_location_code as nchar(4)</param>
+            <param name="payableToCode">payable_to_code as nvarchar(50)</param>
+            <param name="rateOverride">rate_override as nvarchar(50)</param>
+            <param name="quantityOverride">quantity_override as nvarchar(50)</param>
+            <param name="specialRule">special_rule as nvarchar(255)</param>
+            <param name="comments">comments as nvarchar(255)</param>
+            <param name="parentSequence">parent_sequence as int</param>
+            <param name="calculateTaxOnlyInd">calculate_tax_only_ind as nchar(1)</param>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.ScenarioId">
+            <summary>
+            Maps to scenario_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.ScenarioTaxGroupId">
+            <summary>
+            Maps to scenario_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.ScenarioSequence">
+            <summary>
+            Maps to scenario_sequence as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.CalculationOrder">
+            <summary>
+            Maps to calculation_order as smallint
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.ExceptionInd">
+            <summary>
+            Maps to exception_ind as nchar(1)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.CountryCode">
+            <summary>
+            Maps to country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.Jurisdiction">
+            <summary>
+            Maps to jurisdiction as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.TaxingLevel">
+            <summary>
+            Maps to taxing_level as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.TaxType">
+            <summary>
+            Maps to tax_type as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.RateType">
+            <summary>
+            Maps to rate_type as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.RateSubtype">
+            <summary>
+            Maps to rate_subtype as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.ProductCategory">
+            <summary>
+            Maps to product_category as decimal(2,0)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.QuantityInd">
+            <summary>
+            Maps to quantity_ind as nchar(1)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.localTaxLocationCode">
+            <summary>
+            Maps to local_tax_location_code as nchar(4)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.PayableToCode">
+            <summary>
+            Maps to payable_to_code as nvarchar(50)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.SpecialRule">
+            <summary>
+            Maps to special_rule as nvarchar(255)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.Comments">
+            <summary>
+            Maps to comments as nvarchar(255)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.ParentSequence">
+            <summary>
+            Maps to parent_sequence as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.CalculateTaxOnlyInd">
+            <summary>
+            Maps to calculate_tax_only_ind as nchar(1)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.QuantityRoundingType">
+            <summary>
+            Maps to quantity_rounding_type as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.QuantityRoundingPlaces">
+            <summary>
+            Maps to quantity_rounding_places as smallint
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.LineAmountRoundingType">
+            <summary>
+            Maps to line_amount_rounding_type as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.LineAmountRoundingPlaces">
+            <summary>
+            Maps to line_amount_rounding_places as smallint
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.TaxAmountRoundingType">
+            <summary>
+            Maps to tax_amount_rounding_type as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxFilter.TaxAmountRoundingPlaces">
+            <summary>
+            Maps to tax_amount_rounding_places as smallint
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxItemFilter">
+            <summary>
+            Lookup Filter Class - ScenarioTaxItemFilter
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxItemFilter.#ctor">
+            <summary>
+            Default Constructor 
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxItemFilter.#ctor(ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxItemFilter)">
+            <summary>
+            Copy Constructor 
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxItemFilter.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String,System.String)">
+            <summary>
+            Instance Constructor 
+            </summary>
+            <param name="scenarioId">scenario_id as int</param>
+            <param name="scenarioSequence">scenario_sequence as int</param>
+            <param name="countryCode">country_code as nchar(3)</param>
+            <param name="jurisdiction">jurisdiction as nvarchar(10)</param>
+            <param name="itemName">item_name as nvarchar(50)</param>
+            <param name="itemValue">item_value as nvarchar(200)</param>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxItemFilter.ScenarioId">
+            <summary>
+            Maps to scenario_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxItemFilter.ScenarioTaxGroupId">
+            <summary>
+            Maps to scenario_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxItemFilter.ScenarioSequence">
+            <summary>
+            Maps to scenario_sequence as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxItemFilter.CountryCode">
+            <summary>
+            Maps to country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxItemFilter.Jurisdiction">
+            <summary>
+            Maps to jurisdiction as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxItemFilter.ItemName">
+            <summary>
+            Maps to item_name as nvarchar(50)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxItemFilter.ItemValue">
+            <summary>
+            Maps to item_value as nvarchar(200)
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxLicenseTypeFilter">
+            <summary>
+            Lookup Filter Class - ScenarioTaxLicenseTypeFilter
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxLicenseTypeFilter.#ctor">
+            <summary>
+            Default Constructor 
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxLicenseTypeFilter.#ctor(ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxLicenseTypeFilter)">
+            <summary>
+            Copy Constructor 
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxLicenseTypeFilter.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String,System.Nullable{ZyTax.ZMS.Common.Contracts.Types.BusinessType},System.String)">
+            <summary>
+            Instance Constructor 
+            </summary>
+            <param name="scenarioId">scenario_id as int</param>
+            <param name="scenarioSequence">scenario_sequence as int</param>
+            <param name="itemName">item_name as nvarchar(50)</param>
+            <param name="countryCode">country_code as nchar(3)</param>
+            <param name="jurisdiction">jurisdiction as nvarchar(10)</param>
+            <param name="businessType">business_type as nvarchar(10)</param>
+            <param name="businessSubtype">business_subtype as nvarchar(20)</param>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxLicenseTypeFilter.ScenarioId">
+            <summary>
+            Maps to scenario_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxLicenseTypeFilter.ScenarioTaxGroupId">
+            <summary>
+            Maps to scenario_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxLicenseTypeFilter.ScenarioSequence">
+            <summary>
+            Maps to scenario_sequence as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxLicenseTypeFilter.ItemName">
+            <summary>
+            Maps to item_name as nvarchar(50)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxLicenseTypeFilter.CountryCode">
+            <summary>
+            Maps to country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxLicenseTypeFilter.Jurisdiction">
+            <summary>
+            Maps to jurisdiction as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxLicenseTypeFilter.BusinessType">
+            <summary>
+            Maps to business_type as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxLicenseTypeFilter.BusinessSubtype">
+            <summary>
+            Maps to business_subtype as nvarchar(20)
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxProductFilter">
+            <summary>
+            Lookup Filter Class - ScenarioTaxProductFilter
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxProductFilter.#ctor">
+            <summary>
+            Default Constructor 
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxProductFilter.#ctor(ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxProductFilter)">
+            <summary>
+            Copy Constructor 
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxProductFilter.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String,System.String)">
+            <summary>
+            Instance Constructor 
+            </summary>
+            <param name="scenarioId">scenario_id as int</param>
+            <param name="scenarioSequence">scenario_sequence as int</param>
+            <param name="itemName">item_name as nvarchar(50)</param>
+            <param name="countryCode">country_code as nchar(3)</param>
+            <param name="jurisdiction">jurisdiction as nvarchar(10)</param>
+            <param name="productCode">product_code as nvarchar(10)</param>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxProductFilter.ScenarioId">
+            <summary>
+            Maps to scenario_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxProductFilter.ScenarioTaxGroupId">
+            <summary>
+            Maps to scenario_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxProductFilter.ScenarioSequence">
+            <summary>
+            Maps to scenario_sequence as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxProductFilter.ItemName">
+            <summary>
+            Maps to item_name as nvarchar(50)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxProductFilter.CountryCode">
+            <summary>
+            Maps to country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxProductFilter.Jurisdiction">
+            <summary>
+            Maps to jurisdiction as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxProductFilter.ProductCode">
+            <summary>
+            Maps to product_code as nvarchar(10)
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxRateFilter">
+            <summary>
+            Lookup Filter Class - ScenarioTaxRateFilter
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxRateFilter.#ctor">
+            <summary>
+            Default Constructor 
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxRateFilter.#ctor(ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxRateFilter)">
+            <summary>
+            Copy Constructor 
+            </summary>
+            <param name="other"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxRateFilter.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String,System.Nullable{System.Decimal},System.String,System.String,System.String,System.String)">
+            <summary>
+            Instance Constructor 
+            </summary>
+            <param name="scenarioId">scenario_id as int</param>
+            <param name="scenarioSequence">scenario_sequence as int</param>
+            <param name="itemName">item_name as nvarchar(50)</param>
+            <param name="countryCode">country_code as nchar(3)</param>
+            <param name="jurisdiction">jurisdiction as nvarchar(10)</param>
+            <param name="productCategory">product_category as decimal(2,0)</param>
+            <param name="taxingLevel">taxing_level as nvarchar(20)</param>
+            <param name="taxType">tax_type as nvarchar(30)</param>
+            <param name="rateType">rate_type as nvarchar(30)</param>
+            <param name="rateSubtype">rate_subtype as nvarchar(30)</param>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxRateFilter.ScenarioId">
+            <summary>
+            Maps to scenario_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxRateFilter.ScenarioTaxGroupId">
+            <summary>
+            Maps to scenario_id as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxRateFilter.ScenarioSequence">
+            <summary>
+            Maps to scenario_sequence as int
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxRateFilter.ItemName">
+            <summary>
+            Maps to item_name as nvarchar(50)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxRateFilter.CountryCode">
+            <summary>
+            Maps to country_code as nchar(3)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxRateFilter.Jurisdiction">
+            <summary>
+            Maps to jurisdiction as nvarchar(10)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxRateFilter.ProductCategory">
+            <summary>
+            Maps to product_category as decimal(2,0)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxRateFilter.TaxingLevel">
+            <summary>
+            Maps to taxing_level as nvarchar(20)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxRateFilter.TaxType">
+            <summary>
+            Maps to tax_type as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxRateFilter.RateType">
+            <summary>
+            Maps to rate_type as nvarchar(30)
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Determination.Engine.Filter.ScenarioTaxRateFilter.RateSubtype">
+            <summary>
+            Maps to rate_subtype as nvarchar(30)
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.TaxCalculator.#ctor(ZyTax.ZMS.Determination.Engine.RuleSet)">
+            <summary>
+            TaxCalculator constructor.
+            </summary>
+            <param name="ruleSet"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Determination.Engine.TaxCalculator.Calculate">
+            <summary>
+            Calculates the tax
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

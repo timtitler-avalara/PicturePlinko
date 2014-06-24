@@ -1,0 +1,17 @@
+C:\svn\Home\PicturePlinko\bin\x64\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\svn\Home\PicturePlinko\bin\x64\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\svn\Home\PicturePlinko\bin\x64\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\svn\Home\PicturePlinko\bin\x64\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+C:\svn\Home\PicturePlinko\bin\x64\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll
+C:\svn\Home\PicturePlinko\bin\x64\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\svn\Home\PicturePlinko\bin\x64\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\svn\Home\PicturePlinko\bin\x64\Debug\Microsoft.Practices.Unity.dll
+C:\svn\Home\PicturePlinko\bin\x64\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\svn\Home\PicturePlinko\obj\x64\Debug\PicturePlinko.csprojResolveAssemblyReference.cache
+C:\svn\Home\PicturePlinko\obj\x64\Debug\PicturePlinko.csproj.GenerateResource.Cache
+C:\svn\Home\PicturePlinko\bin\x64\Debug\PicturePlinko.exe.config
+C:\svn\Home\PicturePlinko\bin\x64\Debug\PicturePlinko.exe
+C:\svn\Home\PicturePlinko\bin\x64\Debug\PicturePlinko.pdb
+C:\svn\Home\PicturePlinko\obj\x64\Debug\PicturePlinko.exe
+C:\svn\Home\PicturePlinko\obj\x64\Debug\PicturePlinko.pdb
+C:\svn\Home\PicturePlinko\obj\x64\Debug\PicturePlinko.Main.resources

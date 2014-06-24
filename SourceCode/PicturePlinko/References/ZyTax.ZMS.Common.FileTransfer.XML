@@ -1,0 +1,1187 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZyTax.ZMS.Common.FileTransfer</name>
+    </assembly>
+    <members>
+        <member name="T:ZyTax.ZMS.Common.FileTransfer.FtpSsl">
+            <summary>
+            FTP using SSL
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.FileTransfer.FtpSsl.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.FileTransfer.FtpSsl.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor takeing username, password, connection port, filename and host
+            </summary>
+            <param name="userName"></param>
+            <param name="password"></param>
+            <param name="portNumber"></param>
+            <param name="fileName"></param>
+            <param name="hostName"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.FileTransfer.FtpSsl.UploadFile(System.IO.FileStream)">
+            <summary>
+            Upload a file, verifying certificate
+            </summary>
+            <param name="fs"></param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.FileTransfer.FtpSsl.HostName">
+            <summary>
+            Hostname
+            </summary>
+            <value></value>
+            <remarks>Hostname can be in either the full URL format
+            ftp://ftp.myhost.com or just ftp.myhost.com
+            </remarks>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.FileTransfer.FtpSsl.UserName">
+            <summary>
+            Username property
+            </summary>
+            <value></value>
+            <remarks>Can be left blank, in which case 'anonymous' is returned</remarks>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.FileTransfer.FtpSsl.Password">
+            <summary>
+            Password for username
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.FileTransfer.FtpSsl.PortNumber">
+            <summary>
+            The portnumber
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.FileTransfer.FtpSsl.FileName">
+            <summary>
+            The filename
+            </summary>
+        </member>
+        <member name="T:ZyTax.ZMS.Common.FileTransfer.UploadSecureFtp">
+            <summary>
+            Upload file via Secure FTP
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.FileTransfer.UploadSecureFtp.#ctor">
+            <summary>
+            Default constructor, must manually set required properties
+            </summary>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.FileTransfer.UploadSecureFtp.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor taking host, user, password, and port number
+            </summary>
+            <param name="hostName"></param>
+            <param name="userName"></param>
+            <param name="password"></param>
+            <param name="portNumber"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.FileTransfer.UploadSecureFtp.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor taking host, user, password, port number, and key path
+            </summary>
+            <param name="hostName"></param>
+            <param name="userName"></param>
+            <param name="password"></param>
+            <param name="portNumber"></param>
+            <param name="fileName"></param>
+            <param name="keyPath"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.FileTransfer.UploadSecureFtp.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor taking host, user, password, port number,key path, and private key pass phrase
+            </summary>
+            <param name="hostName"></param>
+            <param name="userName"></param>
+            <param name="password"></param>
+            <param name="portNumber"></param>
+            <param name="fileName"></param>
+            <param name="keyPath"></param>
+            <param name="passPhrase"></param>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.FileTransfer.UploadSecureFtp.ConnectSftpStream(System.IO.FileStream)">
+            <summary>
+            Accepts a stream and uploads it.
+            </summary>
+            <param name="uploadStream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZyTax.ZMS.Common.FileTransfer.UploadSecureFtp.ConnectSftpStream(System.IO.FileStream,System.String)">
+            <summary>
+            Accepts a stream and uploads it.
+            </summary>
+            <param name="uploadStream"></param>
+            <returns></returns>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.FileTransfer.UploadSecureFtp.HostName">
+            <summary>
+            Hostname
+            </summary>
+            <value></value>
+            <remarks>Hostname can be in either the full URL format
+            ftp://ftp.myhost.com or just ftp.myhost.com
+            </remarks>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.FileTransfer.UploadSecureFtp.UserName">
+            <summary>
+            Username property
+            </summary>
+            <value></value>
+            <remarks>Can be left blank, in which case 'anonymous' is returned</remarks>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.FileTransfer.UploadSecureFtp.Password">
+            <summary>
+            Password for username
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.FileTransfer.UploadSecureFtp.PortNumber">
+            <summary>
+            The portnumber
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.FileTransfer.UploadSecureFtp.FileName">
+            <summary>
+            The filename
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.FileTransfer.UploadSecureFtp.KeyPath">
+            <summary>
+            The private key path
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.FileTransfer.UploadSecureFtp.PassPhrase">
+            <summary>
+            The private key's pass phrase
+            </summary>
+        </member>
+        <member name="P:ZyTax.ZMS.Common.FileTransfer.UploadSecureFtp.CheckForExistingFile">
+            <summary>
+            Indicates whether to check for existing file before uploading
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.ITransferProtocol">
+            <summary>
+            Summary description for ITransferProtocol.
+            </summary>
+        </member>
+        <member name="E:Tamir.SharpSsh.ITransferProtocol.OnTransferStart">
+            <summary>
+            Triggered when protocol transfer is starting
+            </summary>
+        </member>
+        <member name="E:Tamir.SharpSsh.ITransferProtocol.OnTransferEnd">
+            <summary>
+            Triggered when protocol transfer ends
+            </summary>
+        </member>
+        <member name="E:Tamir.SharpSsh.ITransferProtocol.OnTransferProgress">
+            <summary>
+            Triggered on every interval with the transfer progress iformation.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.Exception">
+            <summary>
+            Summary description for Exception.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.io.File">
+            <summary>
+            Summary description for File.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.io.FileInputStream">
+            <summary>
+            Summary description for FileInputStream.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.io.InputStream">
+            <summary>
+            Summary description for InputStream.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.io.FileOutputStream">
+            <summary>
+            Summary description for FileInputStream.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.io.OutputStream">
+            <summary>
+            Summary description for InputStream.
+            </summary>
+        </member>
+        <member name="T:Tamir.Streams.InputStreamWrapper">
+            <summary>
+            Summary description for InputStreamWrapper.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.io.JStream">
+            <summary>
+            Summary description for Stream.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.lang.Class">
+            <summary>
+            Summary description for Class.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.lang.Integer">
+            <summary>
+            Summary description for Integer.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.lang.Runnable">
+            <summary>
+            Summary description for Runnable.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.lang.StringBuffer">
+            <summary>
+            Summary description for StringBuffer.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.lang.Thread">
+            <summary>
+            Summary description for Thread.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.net.InetAddress">
+            <summary>
+            Summary description for InetAddress.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.net.ServerSocket">
+            <summary>
+            Summary description for ServerSocket.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.net.Socket">
+            <summary>
+            Summary description for Socket.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.Platform">
+            <summary>
+            Summary description for Platform.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.RuntimeException">
+            <summary>
+            Summary description for RuntimeException.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.String">
+            <summary>
+            Summary description for String.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.System">
+            <summary>
+            Summary description for System.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.util.Arrays">
+            <summary>
+            Summary description for Arrays.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.util.Enumeration">
+            <summary>
+            Summary description for Enumeration.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.util.Hashtable">
+            <summary>
+            Summary description for Hashtable.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.util.JavaString">
+            <summary>
+            Summary description for JavaString.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.java.util.Vector">
+            <summary>
+            Summary description for Vector.
+            </summary>
+        </member>
+        <member name="T:Tamir.Streams.PipedInputStream">
+             A piped input stream should be connected
+             to a piped output stream; the piped  input
+             stream then provides whatever data bytes
+             are written to the piped output  stream.
+             Typically, data is read from a <code>PipedInputStream</code>
+             object by one thread  and data is written
+             to the corresponding <code>PipedOutputStream</code>
+             by some  other thread. Attempting to use
+             both objects from a single thread is not
+             recommended, as it may deadlock the thread.
+             The piped input stream contains a buffer,
+             decoupling read operations from write operations,
+             within limits.
+            
+             @author  James Gosling
+             @version 1.35, 12/19/03
+             @see     java.io.PipedOutputStream
+             @since   JDK1.0
+        </member>
+        <member name="F:Tamir.Streams.PipedInputStream.PIPE_SIZE">
+            The size of the pipe's circular input buffer.
+            @since   JDK1.1
+        </member>
+        <member name="F:Tamir.Streams.PipedInputStream.buffer">
+            The circular buffer into which incoming data is placed.
+            @since   JDK1.1
+        </member>
+        <member name="F:Tamir.Streams.PipedInputStream.m_in">
+            The index of the position in the circular buffer at which the
+            next byte of data will be stored when received from the connected
+            piped output stream. <code>in&lt;0</code> implies the buffer is empty,
+            <code>in==out</code> implies the buffer is full
+            @since   JDK1.1
+        </member>
+        <member name="F:Tamir.Streams.PipedInputStream.m_out">
+            The index of the position in the circular buffer at which the next
+            byte of data will be read by this piped input stream.
+            @since   JDK1.1
+        </member>
+        <member name="M:Tamir.Streams.PipedInputStream.#ctor(Tamir.Streams.PipedOutputStream)">
+             Creates a <code>PipedInputStream</code> so
+             that it is connected to the piped output
+             stream <code>src</code>. Data bytes written
+             to <code>src</code> will then be  available
+             as input from this stream.
+            
+             @param      src   the stream to connect to.
+             @exception  IOException  if an I/O error occurs.
+        </member>
+        <member name="M:Tamir.Streams.PipedInputStream.#ctor">
+             Creates a <code>PipedInputStream</code> so
+             that it is not  yet connected. It must be
+             connected to a <code>PipedOutputStream</code>
+             before being used.
+            
+             @see     java.io.PipedInputStream#connect(java.io.PipedOutputStream)
+             @see     java.io.PipedOutputStream#connect(java.io.PipedInputStream)
+        </member>
+        <member name="M:Tamir.Streams.PipedInputStream.connect(Tamir.Streams.PipedOutputStream)">
+             Causes this piped input stream to be connected
+             to the piped  output stream <code>src</code>.
+             If this object is already connected to some
+             other piped output  stream, an <code>IOException</code>
+             is thrown.
+             If <code>src</code> is an
+             unconnected piped output stream and <code>snk</code>
+             is an unconnected piped input stream, they
+             may be connected by either the call:
+             
+             <pre><code>snk.connect(src)</code> </pre>
+             
+             or the call:
+             
+             <pre><code>src.connect(snk)</code> </pre>
+             
+             The two
+             calls have the same effect.
+            
+             @param      src   The piped output stream to connect to.
+             @exception  IOException  if an I/O error occurs.
+        </member>
+        <member name="M:Tamir.Streams.PipedInputStream.receive(System.Int32)">
+            Receives a byte of data.  This method will block if no input is
+            available.
+            @param b the byte being received
+            @exception IOException If the pipe is broken.
+            @since     JDK1.1
+        </member>
+        <member name="M:Tamir.Streams.PipedInputStream.receive(System.Byte[],System.Int32,System.Int32)">
+            Receives data into an array of bytes.  This method will
+            block until some input is available.
+            @param b the buffer into which the data is received
+            @param off the start offset of the data
+            @param len the maximum number of bytes received
+            @exception IOException If an I/O error has occurred.
+        </member>
+        <member name="M:Tamir.Streams.PipedInputStream.receivedLast">
+            Notifies all waiting threads that the last byte of data has been
+            received.
+        </member>
+        <member name="M:Tamir.Streams.PipedInputStream.read">
+             Reads the next byte of data from this piped input stream. The
+             value byte is returned as an <code>int</code> in the range
+             <code>0</code> to <code>255</code>. If no byte is available
+             because the end of the stream has been reached, the value
+             <code>-1</code> is returned. This method blocks until input data
+             is available, the end of the stream is detected, or an exception
+             is thrown.
+             If a thread was providing data bytes
+             to the connected piped output stream, but
+             the  thread is no longer alive, then an
+             <code>IOException</code> is thrown.
+            
+             @return     the next byte of data, or <code>-1</code> if the end of the
+                         stream is reached.
+             @exception  IOException  if the pipe is broken.
+        </member>
+        <member name="M:Tamir.Streams.PipedInputStream.read(System.Byte[],System.Int32,System.Int32)">
+             Reads up to <code>len</code> bytes of data from this piped input
+             stream into an array of bytes. Less than <code>len</code> bytes
+             will be read if the end of the data stream is reached. This method
+             blocks until at least one byte of input is available.
+             If a thread was providing data bytes
+             to the connected piped output stream, but
+             the  thread is no longer alive, then an
+             <code>IOException</code> is thrown.
+            
+             @param      b     the buffer into which the data is read.
+             @param      off   the start offset of the data.
+             @param      len   the maximum number of bytes read.
+             @return     the total number of bytes read into the buffer, or
+                         <code>-1</code> if there is no more data because the end of
+                         the stream has been reached.
+             @exception  IOException  if an I/O error occurs.
+        </member>
+        <member name="M:Tamir.Streams.PipedInputStream.available">
+             Returns the number of bytes that can be read from this input
+             stream without blocking. This method overrides the <code>available</code>
+             method of the parent class.
+            
+             @return     the number of bytes that can be read from this input stream
+                         without blocking.
+             @exception  IOException  if an I/O error occurs.
+             @since   JDK1.0.2
+        </member>
+        <member name="M:Tamir.Streams.PipedInputStream.close">
+             Closes this piped input stream and releases any system resources
+             associated with the stream.
+            
+             @exception  IOException  if an I/O error occurs.
+        </member>
+        <member name="T:Tamir.Streams.PipedOutputStream">
+             A piped output stream can be connected to a piped input stream 
+             to create a communications pipe. The piped output stream is the 
+             sending end of the pipe. Typically, data is written to a 
+             <code>PipedOutputStream</code> object by one thread and data is 
+             read from the connected <code>PipedInputStream</code> by some 
+             other thread. Attempting to use both objects from a single thread 
+             is not recommended as it may deadlock the thread.
+            
+             @author  James Gosling
+             @version 1.26, 12/19/03
+             @see     java.io.PipedInputStream
+             @since   JDK1.0
+        </member>
+        <member name="M:Tamir.Streams.PipedOutputStream.#ctor(Tamir.Streams.PipedInputStream)">
+             Creates a piped output stream connected to the specified piped 
+             input stream. Data bytes written to this stream will then be 
+             available as input from <code>snk</code>.
+            
+             @param      snk   The piped input stream to connect to.
+             @exception  IOException  if an I/O error occurs.
+        </member>
+        <member name="M:Tamir.Streams.PipedOutputStream.#ctor">
+             Creates a piped output stream that is not yet connected to a 
+             piped input stream. It must be connected to a piped input stream, 
+             either by the receiver or the sender, before being used. 
+            
+             @see     java.io.PipedInputStream#connect(java.io.PipedOutputStream)
+             @see     java.io.PipedOutputStream#connect(java.io.PipedInputStream)
+        </member>
+        <member name="M:Tamir.Streams.PipedOutputStream.connect(Tamir.Streams.PipedInputStream)">
+             Connects this piped output stream to a receiver. If this object
+             is already connected to some other piped input stream, an 
+             <code>IOException</code> is thrown.
+             
+             If <code>snk</code> is an unconnected piped input stream and 
+             <code>src</code> is an unconnected piped output stream, they may 
+             be connected by either the call:
+             <blockquote><pre>
+             src.connect(snk)</pre></blockquote>
+             or the call:
+             <blockquote><pre>
+             snk.connect(src)</pre></blockquote>
+             The two calls have the same effect.
+            
+             @param      snk   the piped input stream to connect to.
+             @exception  IOException  if an I/O error occurs.
+        </member>
+        <member name="M:Tamir.Streams.PipedOutputStream.write(System.Int32)">
+             Writes the specified <code>byte</code> to the piped output stream. 
+             If a thread was reading data bytes from the connected piped input 
+             stream, but the thread is no longer alive, then an 
+             <code>IOException</code> is thrown.
+            
+             Implements the <code>write</code> method of <code>OutputStream</code>.
+            
+             @param      b   the <code>byte</code> to be written.
+             @exception  IOException  if an I/O error occurs.
+        </member>
+        <member name="M:Tamir.Streams.PipedOutputStream.write(System.Byte[],System.Int32,System.Int32)">
+             Writes <code>len</code> bytes from the specified byte array 
+             starting at offset <code>off</code> to this piped output stream. 
+             If a thread was reading data bytes from the connected piped input 
+             stream, but the thread is no longer alive, then an 
+             <code>IOException</code> is thrown.
+            
+             @param      b     the data.
+             @param      off   the start offset in the data.
+             @param      len   the number of bytes to write.
+             @exception  IOException  if an I/O error occurs.
+        </member>
+        <member name="M:Tamir.Streams.PipedOutputStream.flush">
+             Flushes this output stream and forces any buffered output bytes 
+             to be written out. 
+             This will notify any readers that bytes are waiting in the pipe.
+            
+             @exception IOException if an I/O error occurs.
+        </member>
+        <member name="M:Tamir.Streams.PipedOutputStream.close">
+             Closes this piped output stream and releases any system resources 
+             associated with this stream. This stream may no longer be used for 
+             writing bytes.
+            
+             @exception  IOException  if an I/O error occurs.
+        </member>
+        <member name="T:Tamir.SharpSsh.jsch.ChannelSftp">
+            <summary>
+            Based on JSch-0.1.30
+            </summary>
+        </member>
+        <member name="M:Tamir.SharpSsh.jsch.ChannelSftp.put(Tamir.SharpSsh.java.String)">
+            
+        </member>
+        <member name="M:Tamir.SharpSsh.jsch.ChannelSftp.get(Tamir.SharpSsh.java.String,Tamir.SharpSsh.java.String)">
+            
+        </member>
+        <member name="M:Tamir.SharpSsh.jsch.ChannelSftp._get(Tamir.SharpSsh.java.String,Tamir.SharpSsh.java.io.OutputStream,Tamir.SharpSsh.jsch.SftpProgressMonitor,System.Int32,System.Int64)">
+            tamir: updated to jcsh-0.1.30
+        </member>
+        <member name="T:Tamir.SharpSsh.jsch.jce.BlowfishCBC">
+            <summary>
+            Summary description for BlowfishCBC.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.jsch.JSchAuthCancelException">
+            <summary>
+            Summary description for JSchException.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.jsch.JSchException">
+            <summary>
+            Summary description for JSchException.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.jsch.JSchPartialAuthException">
+            <summary>
+            Summary description for JSchException.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.jsch.ServerSocketFactory">
+            <summary>
+            Summary description for ServerSocketFactory.
+            </summary>
+        </member>
+        <member name="M:Tamir.SharpSsh.jsch.Util.Time_T2DateTime(System.UInt32)">
+            <summary>
+            Converts a time_t to DateTime
+            </summary>
+        </member>
+        <member name="M:Tamir.SharpSsh.jsch.Util.stripLeadingZeros(System.Byte[])">
+            Utility method to delete the leading zeros from the modulus.
+            @param a modulus
+            @return modulus
+        </member>
+        <member name="T:Tamir.SharpSsh.Scp">
+            <summary>
+            Class for handling SCP file transfers over SSH connection.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.SshTransferProtocolBase">
+            <summary>
+            Summary description for SshTransferProtocolBase.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.SshBase">
+            <summary>
+            A wrapper class for JSch's SSH channel
+            </summary>
+        </member>
+        <member name="F:Tamir.SharpSsh.SshBase.SSH_TCP_PORT">
+            <summary>
+            Default TCP port of SSH protocol
+            </summary>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshBase.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs a new SSH instance
+            </summary>
+            <param name="sftpHost">The remote SSH host</param>
+            <param name="user">The login username</param>
+            <param name="password">The login password</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshBase.#ctor(System.String,System.String)">
+            <summary>
+            Constructs a new SSH instance
+            </summary>
+            <param name="sftpHost">The remote SSH host</param>
+            <param name="user">The login username</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshBase.AddIdentityFile(System.String)">
+            <summary>
+            Adds identity file for publickey user authentication
+            </summary>
+            <param name="privateKeyFile">The path to the private key file</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshBase.AddIdentityFile(System.String,System.String)">
+            <summary>
+            Adds identity file for publickey user authentication
+            </summary>
+            <param name="privateKeyFile">The path to the private key file</param>
+            <param name="passphrase">A passphrase for decrypting the private key file</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshBase.Connect">
+            <summary>
+            Connect to remote SSH server
+            </summary>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshBase.Connect(System.Int32)">
+            <summary>
+            Connect to remote SSH server
+            </summary>
+            <param name="tcpPort">The destination TCP port for this connection</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshBase.Close">
+            <summary>
+            Closes the SSH subsystem
+            </summary>
+        </member>
+        <member name="P:Tamir.SharpSsh.SshBase.Connected">
+            <summary>
+            Return true if the SSH subsystem is connected
+            </summary>
+        </member>
+        <member name="P:Tamir.SharpSsh.SshBase.Cipher">
+            <summary>
+            Gets the Cipher algorithm name used in this SSH connection.
+            </summary>
+        </member>
+        <member name="P:Tamir.SharpSsh.SshBase.Mac">
+            <summary>
+            Gets the MAC algorithm name used in this SSH connection.
+            </summary>
+        </member>
+        <member name="P:Tamir.SharpSsh.SshBase.ServerVersion">
+            <summary>
+            Gets the server SSH version string.
+            </summary>
+        </member>
+        <member name="P:Tamir.SharpSsh.SshBase.ClientVersion">
+            <summary>
+            Gets the client SSH version string.
+            </summary>
+        </member>
+        <member name="P:Tamir.SharpSsh.SshBase.Password">
+            <summary>
+            The password string of the SSH subsystem
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.SshBase.KeyboardInteractiveUserInfo">
+            <summary>
+            For password and KI auth modes
+            </summary>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshTransferProtocolBase.SendStartMessage(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Sends a notification that a file transfer has started
+            </summary>
+            <param name="src">The source file to transferred</param>
+            <param name="dst">Transfer destination</param>
+            <param name="totalBytes">Total bytes to transfer</param>
+            <param name="msg">A transfer message</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshTransferProtocolBase.SendEndMessage(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            Sends a notification that a file transfer has ended
+            </summary>
+            <param name="src">The source file to transferred</param>
+            <param name="dst">Transfer destination</param>
+            <param name="transferredBytes">Transferred Bytes</param>
+            <param name="totalBytes">Total bytes to transfer</param>
+            <param name="msg">A transfer message</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshTransferProtocolBase.SendProgressMessage(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            Sends a transfer progress notification
+            </summary>
+            <param name="src">The source file to transferred</param>
+            <param name="dst">Transfer destination</param>
+            <param name="transferredBytes">Transferred Bytes</param>
+            <param name="totalBytes">Total bytes to transfer</param>
+            <param name="msg">A transfer message</param>
+        </member>
+        <member name="E:Tamir.SharpSsh.SshTransferProtocolBase.OnTransferStart">
+            <summary>
+            Triggered when transfer is starting
+            </summary>
+        </member>
+        <member name="E:Tamir.SharpSsh.SshTransferProtocolBase.OnTransferEnd">
+            <summary>
+            Triggered when transfer ends
+            </summary>
+        </member>
+        <member name="E:Tamir.SharpSsh.SshTransferProtocolBase.OnTransferProgress">
+            <summary>
+            Triggered on every interval with the transfer progress iformation.
+            </summary>
+        </member>
+        <member name="M:Tamir.SharpSsh.Scp.ConnectChannel">
+             <summary>
+            This function is empty, so no channel is connected
+            on session connect 
+             </summary>
+        </member>
+        <member name="M:Tamir.SharpSsh.Scp.Mkdir(System.String)">
+            <summary>
+            Creates a directory on the remot server
+            </summary>
+            <param name="dir">The new directory</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.Scp.To(System.String,System.String)">
+            <summary>
+            Copies a file from local machine to a remote SSH machine.
+            </summary>
+            <param name="localPath">The local file path.</param>
+            <param name="remotePath">The path of the remote file.</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.Scp.To(System.String,System.String,System.Boolean)">
+            <summary>
+            Copies a file from local machine to a remote SSH machine.
+            </summary>
+            <param name="localPath">The local file path.</param>
+            <param name="remotePath">The path of the remote file.</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.Scp.ToRecursive(System.IO.Stream,System.String,System.String)">
+            <summary>
+            Copies files and directories from local machine to a remote SSH machine using SCP.
+            </summary>
+            <param name="server">I/O Stream for the remote server</param>
+            <param name="src">Source to copy</param>
+            <param name="dst">Destination path</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.Scp.From(System.String,System.String)">
+            <summary>
+            Copies a file from a remote SSH machine to the local machine using SCP.
+            </summary>
+            <param name="remoteFile">The remmote file name</param>
+            <param name="localPath">The local destination path</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.Scp.From(System.String,System.String,System.Boolean)">
+            <summary>
+            Copies a file from a remote SSH machine to the local machine using SCP.
+            </summary>
+            <param name="remoteFile">The remmote file name</param>
+            <param name="localPath">The local destination path</param>
+            <param name="recursive">Value indicating whether a recursive transfer should take place</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.Scp.SCP_CheckConnectivity">
+            <summary>
+            Checks is a channel is already connected by this instance
+            </summary>
+        </member>
+        <member name="M:Tamir.SharpSsh.Scp.SCP_ConnectTo(Tamir.SharpSsh.jsch.Channel@,System.IO.Stream@,System.String,System.Boolean)">
+            <summary>
+            Connect a channel to the remote server using the 'SCP TO' command ('scp -t')
+            </summary>
+            <param name="channel">Will contain the new connected channel</param>
+            <param name="server">Will contaun the new connected server I/O stream</param>
+            <param name="rfile">The remote path on the server</param>
+            <param name="recursive">Idicate a recursive scp transfer</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.Scp.SCP_ConnectFrom(Tamir.SharpSsh.jsch.Channel@,System.IO.Stream@,System.String,System.Boolean)">
+            <summary>
+            Connect a channel to the remote server using the 'SCP From' command ('scp -f')
+            </summary>
+            <param name="channel">Will contain the new connected channel</param>
+            <param name="server">Will contaun the new connected server I/O stream</param>
+            <param name="rfile">The remote path on the server</param>
+            <param name="recursive">Idicate a recursive scp transfer</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.Scp.SCP_SendFile(System.IO.Stream,System.String,System.String)">
+            <summary>
+            Transfer a file to the remote server
+            </summary>
+            <param name="server">A connected server I/O stream</param>
+            <param name="src">The source file to copy</param>
+            <param name="dst">The remote destination path</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.Scp.SCP_ReceiveFile(System.IO.Stream,System.String,System.String,System.Int32)">
+            <summary>
+            Transfer a file from the remote server
+            </summary>
+            <param name="server">A connected server I/O stream</param>
+            <param name="rfile">The remote file to copy</param>
+            <param name="lfile">The local destination path</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.Scp.SCP_EnterIntoDir(System.IO.Stream,System.String)">
+            <summary>
+            Instructs the remote server to enter into a directory
+            </summary>
+            <param name="server">A connected server I/O stream</param>
+            <param name="dir">The directory name</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.Scp.SCP_EnterIntoParent(System.IO.Stream)">
+            <summary>
+            Instructs the remote server to go up one level
+            </summary>
+            <param name="server">A connected server I/O stream</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.Scp.SCP_CheckAck(System.IO.Stream)">
+            <summary>
+            Gets server acknowledgment
+            </summary>
+            <param name="ins">A connected server I/O stream</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.Scp.SCP_SendAck(System.IO.Stream)">
+            <summary>
+            Sends acknowledgment to remote server
+            </summary>
+            <param name="server">A connected server I/O stream</param>
+        </member>
+        <member name="P:Tamir.SharpSsh.Scp.Recursive">
+            <summary>
+            Gets or sets a value indicating the default recursive transfer behaviour
+            </summary>
+        </member>
+        <member name="P:Tamir.SharpSsh.Scp.Verbos">
+            <summary>
+            Gets or sets a value indicating whether trace information should be printed
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.SshExec">
+            <summary>
+            Summary description for SshExe.
+            </summary>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshExec.ConnectChannel">
+             <summary>
+            This function is empty, so no channel is connected
+            on session connect 
+             </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.SshShell">
+            <summary>
+            Summary description for SshShell.
+            </summary>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshShell.Write(System.Byte[])">
+            <summary>
+            Writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream. </param>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshShell.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream. </param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream. </param>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshShell.GetStream">
+            <summary>
+            Creates a new I/O stream of communication with this SSH shell connection
+            </summary>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshShell.Expect">
+            <summary>
+            Reads a response string from the SSH channel. This method will block until the pattern in the 'Prompt' property is matched in the response.
+            </summary>
+            <returns>A response string from the SSH server.</returns>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshShell.Expect(System.String)">
+            <summary>
+            Reads a response string from the SSH channel. This method will block until the pattern in the 'Prompt' property is matched in the response.
+            </summary>
+            <returns>A response string from the SSH server.</returns>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshShell.Expect(System.Text.RegularExpressions.Regex)">
+            <summary>
+            Reads a response string from the SSH channel. This method will block until the pattern in the 'Prompt' property is matched in the response.
+            </summary>
+            <returns>A response string from the SSH server.</returns>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshShell.HandleTerminalChars(System.String)">
+            <summary>
+            Removes escape sequence characters from the input string.
+            </summary>
+        </member>
+        <member name="P:Tamir.SharpSsh.SshShell.RemoveTerminalEmulationCharacters">
+            <summary>
+            Gets or sets a value indicating wether this Steam sould remove the terminal emulation's escape sequence characters from the response String.
+            </summary>
+        </member>
+        <member name="P:Tamir.SharpSsh.SshShell.ExpectPattern">
+            <summary>
+            A regular expression pattern string to match when reading the resonse using the ReadResponse() method. The default prompt value is "\n" which makes the ReadRespons() method return one line of response.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.SshStream">
+            <summary>
+            A Stream based SSH class
+            </summary>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshStream.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructs a new SSH stream.
+            </summary>
+            <param name="host">The hostname or IP address of the remote SSH machine</param>
+            <param name="username">The name of the user connecting to the remote machine</param>
+            <param name="password">The password of the user connecting to the remote machine</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshStream.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.
+            </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count- 1) replaced by the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream. </param>
+            <param name="count">The maximum number of bytes to be read from the current stream. </param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshStream.Read(System.Byte[])">
+            <summary>
+            Reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.
+            </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count- 1) replaced by the bytes read from the current source.</param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshStream.ReadByte">
+            <summary>
+            Reads a byte from the stream and advances the position within the stream by one byte, or returns -1 if at the end of the stream.
+            </summary>
+            <returns>The unsigned byte cast to an Int32, or -1 if at the end of the stream.</returns>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshStream.WriteByte(System.Byte)">
+            <summary>
+            Writes a byte to the current position in the stream and advances the position within the stream by one byte.
+            </summary>
+            <param name="value">The byte to write to the stream. </param>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshStream.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream. </param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream. </param>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshStream.Write(System.Byte[])">
+            <summary>
+            Writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream. </param>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshStream.Write(System.String)">
+            <summary>
+            Writes a String into the SSH channel. This method appends an 'end of line' character to the input string.
+            </summary>
+            <param name="data">The String to write to the SSH channel.</param>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshStream.Close">
+            <summary>
+            Closes the current stream and releases any resources (such as sockets and file handles) associated with the current stream.
+            </summary>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshStream.Flush">
+            <summary>
+            Clears all buffers for this stream and causes any buffered data to be written to the underlying device.
+            </summary>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshStream.SetLength(System.Int64)">
+            <summary>
+            This method has no effect on the Stream.
+            </summary>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshStream.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>
+            This method has no effect on the Stream.
+            </summary>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshStream.ReadResponse">
+            <summary>
+            Reads a response string from the SSH channel. This method will block until the pattern in the 'Prompt' property is matched in the response.
+            </summary>
+            <returns>A response string from the SSH server.</returns>
+        </member>
+        <member name="M:Tamir.SharpSsh.SshStream.HandleTerminalChars(System.String)">
+            <summary>
+            Removes escape sequence characters from the input string.
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Tamir.SharpSsh.SshStream.CanRead">
+            <summary>
+            Gets a value indicating whether the current stream supports reading.
+            </summary>
+        </member>
+        <member name="P:Tamir.SharpSsh.SshStream.CanWrite">
+            <summary>
+            Gets a value indicating whether the current stream supports writing.
+            </summary>
+        </member>
+        <member name="P:Tamir.SharpSsh.SshStream.CanSeek">
+            <summary>
+            Gets a value indicating whether the current stream supports seeking. This stream cannot seek, and will always return false.
+            </summary>
+        </member>
+        <member name="P:Tamir.SharpSsh.SshStream.Length">
+            <summary>
+            Gets the length in bytes of the stream.
+            </summary>
+        </member>
+        <member name="P:Tamir.SharpSsh.SshStream.Position">
+            <summary>
+            Gets or sets the position within the current stream. This Stream cannot seek. This property has no effect on the Stream and will always return 0.
+            </summary>
+        </member>
+        <member name="P:Tamir.SharpSsh.SshStream.Prompt">
+            <summary>
+            A regular expression pattern string to match when reading the resonse using the ReadResponse() method. The default prompt value is "\n" which makes the ReadRespons() method return one line of response.
+            </summary>
+        </member>
+        <member name="P:Tamir.SharpSsh.SshStream.RemoveTerminalEmulationCharacters">
+            <summary>
+            Gets or sets a value indicating wether this Steam sould remove the terminal emulation's escape sequence characters from the response String.
+            </summary>
+        </member>
+        <member name="P:Tamir.SharpSsh.SshStream.Cipher">
+            <summary>
+            Gets the Cipher algorithm name used in this SSH connection.
+            </summary>
+        </member>
+        <member name="P:Tamir.SharpSsh.SshStream.Mac">
+            <summary>
+            Gets the MAC algorithm name used in this SSH connection.
+            </summary>
+        </member>
+        <member name="P:Tamir.SharpSsh.SshStream.ServerVersion">
+            <summary>
+            Gets the server SSH version string.
+            </summary>
+        </member>
+        <member name="P:Tamir.SharpSsh.SshStream.ClientVersion">
+            <summary>
+            Gets the client SSH version string.
+            </summary>
+        </member>
+        <member name="T:Tamir.SharpSsh.SshTransferException">
+            <summary>
+            Summary description for SshTransferException.
+            </summary>
+        </member>
+        <member name="T:Tamir.Streams.CombinedStream">
+            <summary>
+            Summary description for CombinedStream.
+            </summary>
+        </member>
+        <member name="M:Tamir.Streams.CombinedStream.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.
+            </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count- 1) replaced by the bytes read from the current source.</param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin storing the data read from the current stream. </param>
+            <param name="count">The maximum number of bytes to be read from the current stream. </param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
+        </member>
+        <member name="M:Tamir.Streams.CombinedStream.Read(System.Byte[])">
+            <summary>
+            Reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.
+            </summary>
+            <param name="buffer">An array of bytes. When this method returns, the buffer contains the specified byte array with the values between offset and (offset + count- 1) replaced by the bytes read from the current source.</param>
+            <returns>The total number of bytes read into the buffer. This can be less than the number of bytes requested if that many bytes are not currently available, or zero (0) if the end of the stream has been reached.</returns>
+        </member>
+        <member name="M:Tamir.Streams.CombinedStream.ReadByte">
+            <summary>
+            Reads a byte from the stream and advances the position within the stream by one byte, or returns -1 if at the end of the stream.
+            </summary>
+            <returns>The unsigned byte cast to an Int32, or -1 if at the end of the stream.</returns>
+        </member>
+        <member name="M:Tamir.Streams.CombinedStream.WriteByte(System.Byte)">
+            <summary>
+            Writes a byte to the current position in the stream and advances the position within the stream by one byte.
+            </summary>
+            <param name="value">The byte to write to the stream. </param>
+        </member>
+        <member name="M:Tamir.Streams.CombinedStream.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream. </param>
+            <param name="offset">The zero-based byte offset in buffer at which to begin copying bytes to the current stream.</param>
+            <param name="count">The number of bytes to be written to the current stream. </param>
+        </member>
+        <member name="M:Tamir.Streams.CombinedStream.Write(System.Byte[])">
+            <summary>
+            Writes a sequence of bytes to the current stream and advances the current position within this stream by the number of bytes written.
+            </summary>
+            <param name="buffer">An array of bytes. This method copies count bytes from buffer to the current stream. </param>
+        </member>
+        <member name="M:Tamir.Streams.CombinedStream.Close">
+            <summary>
+            Closes the current stream and releases any resources (such as sockets and file handles) associated with the current stream.
+            </summary>
+        </member>
+        <member name="M:Tamir.Streams.CombinedStream.Flush">
+            <summary>
+            Clears all buffers for this stream and causes any buffered data to be written to the underlying device.
+            </summary>
+        </member>
+        <member name="M:Tamir.Streams.CombinedStream.SetLength(System.Int64)">
+            <summary>
+            This method has no effect on the Stream.
+            </summary>
+        </member>
+        <member name="M:Tamir.Streams.CombinedStream.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>
+            This method has no effect on the Stream.
+            </summary>
+        </member>
+        <member name="P:Tamir.Streams.CombinedStream.CanRead">
+            <summary>
+            Gets a value indicating whether the current stream supports reading.
+            </summary>
+        </member>
+        <member name="P:Tamir.Streams.CombinedStream.CanWrite">
+            <summary>
+            Gets a value indicating whether the current stream supports writing.
+            </summary>
+        </member>
+        <member name="P:Tamir.Streams.CombinedStream.CanSeek">
+            <summary>
+            Gets a value indicating whether the current stream supports seeking. This stream cannot seek, and will always return false.
+            </summary>
+        </member>
+        <member name="P:Tamir.Streams.CombinedStream.Length">
+            <summary>
+            Gets the length in bytes of the stream.
+            </summary>
+        </member>
+        <member name="P:Tamir.Streams.CombinedStream.Position">
+            <summary>
+            Gets or sets the position within the current stream. This Stream cannot seek. This property has no effect on the Stream and will always return 0.
+            </summary>
+        </member>
+        <member name="T:Tamir.Streams.ProtectedConsoleStream">
+            <summary>
+            This class provide access to the console stream obtained by calling the
+            Console.OpenStandardInput() and Console.OpenStandardOutput(), and prevents reading 
+            into buffers to large for the Console Stream
+            </summary>
+        </member>
+    </members>
+</doc>
